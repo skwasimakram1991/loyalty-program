@@ -28,12 +28,18 @@ function Sidebar() {
         </a>
         <ul>
           <li className={splitLocation[1] === "Dashboard" ? "active" : ""}>
-            <a href="#">
+            <a href="/Dashboard">
               <img src={img1} alt="" /> Dashboard
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li
+            className={
+              splitLocation[1] === "PartnerFacilities"
+                ? "active"
+                : "PartnerFacilities"
+            }
+          >
+            <a href="/PartnerFacilities">
               <img src={img2} alt="" /> Partner Facilities
             </a>
           </li>

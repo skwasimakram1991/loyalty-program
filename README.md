@@ -68,3 +68,38 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Common Strucher for all page
+
+// import logo from "./logo.svg";
+// import "./App.css";
+
+import React from "react";
+import logo from "../assets/images/logo.svg";
+import Sidebar from "../assets/inc/Sidebar";
+import Header from "../assets/inc/Header";
+
+function PartnerFacilities() {
+  return (
+    <div>
+      <section>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-2 p-0">
+              <Sidebar />
+              <section className="partner-facilities-page">
+                
+              </section>
+            </div>
+            <div className="col-lg-10 p-0">
+              <Header />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default PartnerFacilities;

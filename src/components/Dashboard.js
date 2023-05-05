@@ -8,6 +8,7 @@ import ReactApexChart from "react-apexcharts";
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
+import Footer from "../assets/inc/Footer";
 
 function Dashboard() {
   const [state, setState] = useState({
@@ -98,140 +99,151 @@ function Dashboard() {
 
             <div className="col-lg-10 p-0">
               <Header />
-              <section className="dashboard-page">
-                <h2>Dashboard</h2>
-                <div className="sec1">
-                  <div className="row">
-                    <div className="col-lg">
-                      <div className="wrap">
-                        <img src={img1} alt="" />
-                        <h3>
-                          <span>Users</span>1824
-                        </h3>
+              <section className="dashboard-page main-page-size">
+                <div className="row align-items-center title-sec">
+                  <div className="col-lg-6">
+                    <h2>Dashboard</h2>
+                  </div>
+                </div>
+                  <div className="sec1">
+                    <div className="row">
+                      <div className="col-lg">
+                        <div className="wrap">
+                          <img src={img1} alt="" />
+                          <h3>
+                            <span>Users</span>1824
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="col-lg">
+                        <div className="wrap">
+                          <img src={img1} alt="" />
+                          <h3>
+                            <span>partner facility</span>1824
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="col-lg">
+                        <div className="wrap">
+                          <img src={img1} alt="" />
+                          <h3>
+                            <span>Sponsored partner</span>1824
+                          </h3>
+                        </div>
                       </div>
                     </div>
-                    <div className="col-lg">
-                      <div className="wrap">
-                        <img src={img1} alt="" />
-                        <h3>
-                          <span>partner facility</span>1824
-                        </h3>
+                  </div>
+                  <div className="sec2">
+                    <div className="row align-items-center">
+                      <div className="col-lg-6">
+                        <h3>User stats</h3>
+                      </div>
+                      <div className="col-lg-6">
+                        <form action="">
+                          <DatePicker
+                            className="date-pick"
+                            placeholderText={"Start Date"}
+                            selected={startDate}
+                            onChange={(date) => setStartDate(date)}
+                          />
+
+                          <DatePicker
+                            className="date-pick"
+                            selected={startDate}
+                            placeholderText={"End Date"}
+                            onChange={(date) => setStartDate(date)}
+                          />
+                          <input type="submit" value="Export" />
+                        </form>
                       </div>
                     </div>
-                    <div className="col-lg">
-                      <div className="wrap">
-                        <img src={img1} alt="" />
-                        <h3>
-                          <span>Sponsored partner</span>1824
-                        </h3>
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <ReactApexChart
+                          options={state.options}
+                          series={state.series}
+                          type="bar"
+                          height={350}
+                        />
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="sec2">
-                  <div className="row align-items-center">
-                    <div className="col-lg-6">
-                      <h3>User stats</h3>
-                    </div>
-                    <div className="col-lg-6">
-                      <form action="">
-                        <DatePicker
-                          className="date-pick"
-                          placeholderText={"Start Date"}
-                          selected={startDate}
-                          onChange={(date) => setStartDate(date)}
-                        />
+                  <div className="sec2">
+                    <div className="row align-items-center">
+                      <div className="col-lg-6">
+                        <h3>partner facility stats</h3>
+                      </div>
+                      <div className="col-lg-6">
+                        <form action="">
+                          <DatePicker
+                            className="date-pick"
+                            placeholderText={"Start Date"}
+                            selected={startDate}
+                            onChange={(date) => setStartDate(date)}
+                          />
 
-                        <DatePicker
-                          className="date-pick"
-                          selected={startDate}
-                          placeholderText={"End Date"}
-                          onChange={(date) => setStartDate(date)}
+                          <DatePicker
+                            className="date-pick"
+                            selected={startDate}
+                            placeholderText={"End Date"}
+                            onChange={(date) => setStartDate(date)}
+                          />
+                          <input type="submit" value="Export" />
+                        </form>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <ReactApexChart
+                          options={state.options}
+                          series={state.series}
+                          type="bar"
+                          height={350}
                         />
-                        <input type="submit" value="Export" />
-                      </form>
+                      </div>
                     </div>
                   </div>
-                  <div className="row">
-                    <ReactApexChart
-                      options={state.options}
-                      series={state.series}
-                      type="bar"
-                      height={350}
-                    />
-                  </div>
-                </div>
-                <div className="sec2">
-                  <div className="row align-items-center">
-                    <div className="col-lg-6">
-                      <h3>partner facility stats</h3>
-                    </div>
-                    <div className="col-lg-6">
-                      <form action="">
-                        <DatePicker
-                          className="date-pick"
-                          placeholderText={"Start Date"}
-                          selected={startDate}
-                          onChange={(date) => setStartDate(date)}
-                        />
+                  <div className="sec2">
+                    <div className="row align-items-center">
+                      <div className="col-lg-6">
+                        <h3>Sponsored partner stats</h3>
+                      </div>
+                      <div className="col-lg-6">
+                        <form action="">
+                          <DatePicker
+                            className="date-pick"
+                            placeholderText={"Start Date"}
+                            selected={startDate}
+                            onChange={(date) => setStartDate(date)}
+                          />
 
-                        <DatePicker
-                          className="date-pick"
-                          selected={startDate}
-                          placeholderText={"End Date"}
-                          onChange={(date) => setStartDate(date)}
+                          <DatePicker
+                            className="date-pick"
+                            selected={startDate}
+                            placeholderText={"End Date"}
+                            onChange={(date) => setStartDate(date)}
+                          />
+                          <input type="submit" value="Export" />
+                        </form>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <ReactApexChart
+                          options={state.options}
+                          series={state.series}
+                          type="bar"
+                          height={350}
                         />
-                        <input type="submit" value="Export" />
-                      </form>
+                      </div>
                     </div>
                   </div>
-                  <div className="row">
-                    <ReactApexChart
-                      options={state.options}
-                      series={state.series}
-                      type="bar"
-                      height={350}
-                    />
-                  </div>
-                </div>
-                <div className="sec2">
-                  <div className="row align-items-center">
-                    <div className="col-lg-6">
-                      <h3>Sponsored partner stats</h3>
-                    </div>
-                    <div className="col-lg-6">
-                      <form action="">
-                        <DatePicker
-                          className="date-pick"
-                          placeholderText={"Start Date"}
-                          selected={startDate}
-                          onChange={(date) => setStartDate(date)}
-                        />
-
-                        <DatePicker
-                          className="date-pick"
-                          selected={startDate}
-                          placeholderText={"End Date"}
-                          onChange={(date) => setStartDate(date)}
-                        />
-                        <input type="submit" value="Export" />
-                      </form>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <ReactApexChart
-                      options={state.options}
-                      series={state.series}
-                      type="bar"
-                      height={350}
-                    />
-                  </div>
-                </div>
               </section>
             </div>
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

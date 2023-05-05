@@ -14,6 +14,7 @@ import {
 import login from "./components/Login";
 import Dashboard from "./components/Dashboard";
 import PartnerFacilities from "./components/PartnerFacilities";
+import AddPartner from  "./components/AddPartner"
 function App() {
   return (
     <Router>
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/login" component={login} />
         <Route exact path="/Dashboard" component={Dashboard} />
         <Route exact path="/PartnerFacilities" component={PartnerFacilities} />
+        <Route exact path="/AddPartner" component={AddPartner} />
         {/* <Route path="/about" component={About} />
         <Route path="/contactus" component={ContactUs} /> */}
         {/* <Redirect to="/" /> */}
