@@ -5,18 +5,13 @@ import logo from '../assets/images/logo.svg';
 import Sidebar from '../assets/inc/Sidebar';
 import Header from '../assets/inc/Header';
 import Footer from '../assets/inc/Footer';
-import partnerimg1 from '../assets/images/partner-img1.png';
-import partnerimg2 from '../assets/images/partner-img2.png';
-import partnerimg3 from '../assets/images/partner-img3.png';
-import partnerimg4 from '../assets/images/partner-img4.png';
-import partnerimg5 from '../assets/images/partner-img5.png';
-import partnerimg6 from '../assets/images/partner-img6.png';
+
 import editimg from '../assets/images/edit-icon.svg';
 
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';
 import ColorCode from '../assets/MicroComponents/ColorCode';
-function Tier() {
+function AddPartner() {
   return (
     <div>
       <section>
@@ -29,23 +24,51 @@ function Tier() {
               <Header />
               <section className='partner-facilities-page main-page-size'>
                 <div className='container-fluid'>
-                  <div className='row align-items-center title-sec'>
+                  <div className='row align-items-center title-sec tier-title'>
                     <div className='col-lg-6'>
-                      <h2>Tier management</h2>
+                      <h2>Tier benefits</h2>
                       <ul className='breadcrumbs'>
                         <li>
                           <a href='#'>
                             Tier <BsChevronRight />
                           </a>
                         </li>
-
-                        <li>Tier management</li>
+                        <li>Tier benefits</li>
                       </ul>
                     </div>
                     <div className='col-lg-6 text-end'>
-                      <a href='/addTier' className='title-btn'>
-                        Add tier
+                      <a href='/addbenefits' className='title-btn'>
+                        Add Benefit
                       </a>
+                    </div>
+                    <div className='col-lg-12'>
+                      <div className='form-wrap head-form'>
+                        <form action=''>
+                          <div className='row'>
+                            <div className='col-lg-4'>
+                              <input type='text' placeholder='Search' />
+                            </div>
+                            <div className='col-lg-5 ms-auto d-flex justify-content-end  '>
+                              <select name='' id=''>
+                                <option default value='Tier Name'>
+                                  Tier Name
+                                </option>
+                                <option value='Sponsor category'>
+                                  Sponsor category
+                                </option>
+                              </select>
+                              <select name='' id=''>
+                                <option default value='Tier Name'>
+                                  Tier Name
+                                </option>
+                                <option value='Sponsor category'>
+                                  Sponsor category
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
                     </div>
                   </div>
                   <div className='row'>
@@ -53,21 +76,19 @@ function Tier() {
                       <div className='table-wrap'>
                         <table>
                           <tr>
+                            <th>Benefit name</th>
+                            <th>Discount code</th>
+                            <th>Discount %</th>
                             <th>Tier name</th>
-                            <th>Start Point</th>
-                            <th>End Point</th>
-                            <th>Workout per week</th>
-                            <th>Color code</th>
+                            <th>Sponsor category</th>
                             <th>Edit</th>
                           </tr>
                           <tr>
+                            <td>Free Consultations + Follow ups</td>
+                            <td>adidas10</td>
+                            <td>10%</td>
                             <td>Healthy Beginner</td>
-                            <td>50</td>
-                            <td>1750</td>
-                            <td>2-3</td>
-                            <td>
-                              <ColorCode color={'#F59A11'} />
-                            </td>
+                            <td>FnB</td>
                             <td>
                               <a href='#' className='edit-img'>
                                 <img src={editimg} alt='' />
@@ -75,13 +96,12 @@ function Tier() {
                             </td>
                           </tr>
                           <tr>
+                            <td>Discounts on Packages</td>
+                            <td>adidas10</td>
+                            <td>10%</td>
                             <td>Intermediate Athlete</td>
-                            <td>1800</td>
-                            <td>5450</td>
-                            <td>3-4</td>
-                            <td>
-                              <ColorCode color={'#1188F5'} />
-                            </td>
+                            <td>FnB</td>
+
                             <td>
                               <a href='#' className='edit-img'>
                                 <img src={editimg} alt='' />
@@ -89,13 +109,12 @@ function Tier() {
                             </td>
                           </tr>
                           <tr>
+                            <td>Free Consultations + Follow ups</td>
+                            <td>adidas10</td>
+                            <td>10%</td>
                             <td>Advanced Athlete</td>
-                            <td>5500</td>
-                            <td>7250</td>
-                            <td>4-5</td>
-                            <td>
-                              <ColorCode color={'#BA11F5'} />
-                            </td>
+                            <td>FnB</td>
+
                             <td>
                               <a href='#' className='edit-img'>
                                 <img src={editimg} alt='' />
@@ -103,13 +122,24 @@ function Tier() {
                             </td>
                           </tr>
                           <tr>
+                            <td>Free Sessions</td>
+                            <td>adidas10</td>
+                            <td>10%</td>
+                            <td>Advanced Athlete</td>
+                            <td>FnB</td>
+
+                            <td>
+                              <a href='#' className='edit-img'>
+                                <img src={editimg} alt='' />
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Free access to events</td>
+                            <td>adidas10</td>
+                            <td>10%</td>
                             <td>Elite Athlete</td>
-                            <td>7300</td>
-                            <td>9000</td>
-                            <td>5+</td>
-                            <td>
-                              <ColorCode color={'#4CF67C'} />
-                            </td>
+                            <td>FnB</td>
                             <td>
                               <a href='#' className='edit-img'>
                                 <img src={editimg} alt='' />
@@ -117,13 +147,11 @@ function Tier() {
                             </td>
                           </tr>
                           <tr>
+                            <td>Free Classes/Trials</td>
+                            <td>adidas10</td>
+                            <td>10%</td>
                             <td>Ambassador</td>
-                            <td>9000+</td>
-                            <td>Onwards</td>
-                            <td>5+</td>
-                            <td>
-                              <ColorCode color={'#650575'} />
-                            </td>
+                            <td>FnB</td>
                             <td>
                               <a href='#' className='edit-img'>
                                 <img src={editimg} alt='' />
@@ -145,4 +173,4 @@ function Tier() {
   );
 }
 
-export default Tier;
+export default AddPartner;

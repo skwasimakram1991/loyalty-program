@@ -1,0 +1,210 @@
+/** @format */
+
+@media (max-width: 1770px) {
+  section.menu-sec ul li a {
+    padding-left: 30px;
+  }
+  section.menu-sec ul li ul.sub-menu li a {
+    padding-left: 65px;
+  }
+}
+@media (max-width: 1590px) {
+  section.menu-sec ul li a {
+    padding-left: 18px;
+    font-size: 13px;
+    padding-block: 10px;
+  }
+  section.menu-sec ul li ul.sub-menu li a {
+    padding-left: 45px;
+  }
+}
+@media (max-width: 1320px) {
+  section.menu-sec ul li a {
+    padding-left: 18px;
+    padding-block: 6px;
+    font-size: 11px;
+  }
+  section.menu-sec ul li a img {
+    margin-right: 8px;
+    width: 14px;
+  }
+  header {
+    padding: 16px 14px;
+    padding-right: 40px;
+  }
+  section.main-page-size {
+    padding-right: 54px;
+  }
+  section.dashboard-page .sec1 .wrap h3 {
+    font-size: 22px;
+    line-height: 26px;
+    margin: 0;
+  }
+  section.dashboard-page .sec1 .wrap img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+  }
+  section.dashboard-page .sec1 .wrap {
+    padding: 24px;
+  }
+  section.main-page-size .title-sec {
+    padding: 0 0 38px;
+  }
+  section.dashboard-page .sec2 {
+    margin: 30px 0 0;
+  }
+  section.dashboard-page .sec2 {
+    padding: 25px 25px;
+  }
+  section.dashboard-page .sec2 > .row:first-child > * {
+    width: 100%;
+  }
+  section.dashboard-page .sec2 > .row:first-child > *:last-child {
+    margin-top: 20px;
+  }
+  header ul li h3 {
+    font-size: 14px;
+    margin-left: 12px;
+  }
+  header ul li h3 span {
+    font-size: 10px;
+    line-height: 17px;
+  }
+}
+
+@media (max-width: 1160px) {
+  section.menu-sec ul li a svg {
+    margin-top: 5px;
+  }
+  section.menu-sec ul li a {
+    padding-left: 12px;
+    padding-block: 4px;
+    font-size: 10px;
+  }
+  section.menu-sec ul li ul.sub-menu li a {
+    padding-left: 34px;
+  }
+  section.dashboard-page .sec1 .wrap {
+    padding: 20px;
+    flex-direction: column;
+    align-items: start;
+  }
+  section.dashboard-page .sec1 .wrap img {
+    width: 60px;
+    height: 60px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  section.menu-sec a.main-logo img {
+    max-width: 126px;
+  }
+}
+
+@media (max-width: 990px) {
+  section.menu-sec {
+    overflow: visible;
+    left: -170px;
+    transition: all 0.3s ease-in-out;
+  }
+  section.menu-sec .hamburger {
+    position: fixed;
+    top: 16px;
+    height: 36px;
+    display: grid;
+    font-size: 22px;
+    left: 1px;
+    background: #fafafa;
+    width: 36px;
+    box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    place-content: center;
+  }
+  section.menu-sec.show {
+    left: 0 !important;
+    transition: all 0.3s ease-in-out;
+  }
+  section.menu-sec.show .hamburger {
+    left: 200px !important;
+    top: 16px;
+    transition: all 0.3s ease-in-out;
+  }
+  section.menu-sec {
+    left: -246px;
+    z-index: 9999;
+  }
+  section.menu-sec {
+    width: 200px;
+  }
+  header {
+    width: 100%;
+  }
+  section.main-page-size .title-sec {
+    padding: 0 0 22px;
+  }
+  section.main-page-size {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  section.dashboard-page .sec1 .wrap {
+    padding: 15px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  header {
+    padding: 16px 14px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  section.main-page-size {
+    text-align: center;
+  }
+  section.dashboard-page .sec1 .wrap h3 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  section.dashboard-page .sec1 .wrap img {
+    width: 52px;
+    height: 52px;
+  }
+  section.dashboard-page .sec2 form {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  header ul li a img {
+    max-width: 40px;
+  }
+  section.main-page-size {
+    margin-top: 0;
+    padding-top: 100px;
+  }
+  section.dashboard-page .sec2 h3 {
+    margin-top: 0;
+  }
+  section.dashboard-page .sec1 .wrap {
+    padding: 10px;
+  }
+}
+@media (max-width: 580px) {
+  /* section.dashboard-page .sec1 .wrap h3 span {
+    line-height: 23px;
+    min-height: 47px;
+  } */
+  section.dashboard-page .sec1 .wrap img {
+    width: 44px;
+    height: 44px;
+  }
+  section.dashboard-page .sec1 .wrap h3 span {
+    font-size: 14px;
+    line-height: 23px;
+    margin: 0 0 4px;
+    letter-spacing: 0.5px;
+  }
+  section.dashboard-page .sec1 .wrap h3 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

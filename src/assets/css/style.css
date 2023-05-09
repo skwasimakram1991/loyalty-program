@@ -22,6 +22,22 @@ select:focus {
   outline: none;
 }
 
+.pm-btn {
+  background: #fa4248;
+  border-radius: 4px;
+  border: none;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  color: #ffffff;
+  padding: 13px 50px;
+  margin: 15px 0 0;
+}
+
 a,
 a:hover {
   text-decoration: none;
@@ -35,6 +51,10 @@ ul {
 li,
 ol {
   list-style: none;
+}
+
+.mr-t-24 {
+  margin-top: 24px;
 }
 
 button:focus {
@@ -114,7 +134,13 @@ section.menu-sec {
   position: fixed;
   top: 0;
   left: 0;
+  overflow: auto;
   width: 17%;
+}
+section.menu-sec::-webkit-scrollbar {
+  width: 2px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.043);
 }
 section.menu-sec a.main-logo {
   padding: 20px 0;
@@ -173,14 +199,14 @@ section.menu-sec ul li ul.sub-menu {
 section.menu-sec ul li ul.sub-menu li a {
   padding-left: 95px;
 }
-section.menu-sec ul li.active a {
+section.menu-sec ul li.active > a {
   background: #ffe8e8;
   color: #fa4248;
 }
-section.menu-sec ul li.active a img {
+section.menu-sec ul li.active > a img {
   filter: invert(35%) sepia(56%) saturate(4166%) hue-rotate(337deg) brightness(105%) contrast(96%);
 }
-section.menu-sec ul li.active a:before {
+section.menu-sec ul li.active > a:before {
   opacity: 1;
 }
 
@@ -256,6 +282,9 @@ section.main-page-size {
 section.main-page-size .title-sec {
   padding: 0 0 48px;
 }
+section.main-page-size .title-sec.tier-title {
+  padding-bottom: 24px;
+}
 section.main-page-size .title-sec h2 {
   font-weight: 600;
   font-size: 24px;
@@ -275,6 +304,9 @@ section.main-page-size .title-sec a.title-btn {
   display: inline-block;
   padding: 0 25px;
   text-decoration: none;
+}
+section.main-page-size .title-sec.title-sec2 {
+  padding-bottom: 24px;
 }
 
 section.dashboard-page .sec1 .wrap {
@@ -433,6 +465,14 @@ section.partner-facilities-page .table-wrap table td {
   border-bottom: 1px solid #efefef;
   padding: 20px 30px;
 }
+section.partner-facilities-page .table-wrap table td span {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
 section.partner-facilities-page .table-wrap table td img {
   margin-right: 10px;
 }
@@ -588,6 +628,44 @@ section.partner-facilities-page .form-wrap :-moz-placeholder {
   /* Firefox 18- */
   color: #adb5bd;
 }
+section.partner-facilities-page .form-wrap .file-box {
+  border: 1px dashed rgba(169, 167, 167, 0.5);
+  border-radius: 4px;
+  padding: 25px;
+  text-align: center;
+  min-height: 180px;
+  margin-bottom: 24px;
+}
+section.partner-facilities-page .form-wrap .file-box img {
+  margin-bottom: 12px;
+}
+section.partner-facilities-page .form-wrap .file-box h4 {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 155%;
+  text-align: center;
+  color: #2c2c2c;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 9px;
+}
+section.partner-facilities-page .form-wrap .file-box h4 span {
+  font-weight: 600;
+  font-size: 10px;
+  color: #667085;
+}
+section.partner-facilities-page .form-wrap .file-box input[type=file] {
+  position: absolute;
+  width: 200px !important;
+  left: 0;
+  top: 0;
+}
+section.partner-facilities-page .form-wrap .file-box button {
+  margin-inline: auto;
+  padding: 5px 24px;
+  font-size: 10px;
+}
 section.partner-facilities-page .form-wrap input[type=submit] {
   background: #fa4248;
   border-radius: 4px;
@@ -602,4 +680,124 @@ section.partner-facilities-page .form-wrap input[type=submit] {
   color: #ffffff;
   padding: 13px 50px;
   margin: 15px 0 0;
+}
+section.partner-facilities-page .form-wrap.head-form {
+  background: transparent;
+  border: none;
+  border-radius: 7.26207px;
+  padding: 0;
+  margin-top: 40px;
+}
+section.partner-facilities-page .form-wrap.head-form input {
+  margin-bottom: 0;
+}
+section.partner-facilities-page .form-wrap.head-form select {
+  color: #adb5bd;
+}
+section.partner-facilities-page .form-wrap.head-form select:not(:last-child) {
+  margin-right: 30px;
+}
+section.partner-facilities-page .form-wrap.head-form.user-form input:not([type=submit]) {
+  border: 1px solid rgba(169, 167, 167, 0.5);
+  border-radius: 4px;
+  background-color: transparent;
+}
+section.partner-facilities-page .userGrid {
+  background: #ffffff;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  align-items: start;
+  gap: 24px;
+}
+section.partner-facilities-page .userGrid h5 {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 155%;
+  text-transform: capitalize;
+  color: #212529;
+}
+section.partner-facilities-page .userGrid h5 span {
+  color: #667085;
+  margin-top: 6px;
+  display: block;
+  word-break: break-word;
+}
+
+section.subscriptionManagement .subscribe-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 24px;
+}
+section.subscriptionManagement .subscribe-cards .sub-card {
+  background: #eeeeee;
+  padding: 40px 20px;
+  border-radius: 4px;
+}
+section.subscriptionManagement .subscribe-cards .sub-card h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  color: #191d23;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section.subscriptionManagement .subscribe-cards .sub-card p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #64748b;
+}
+section.subscriptionManagement .subscribe-cards .sub-card h5 {
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 66px;
+  color: #191d23;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+section.subscriptionManagement .subscribe-cards .sub-card h5 span {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4b5768;
+}
+section.subscriptionManagement .subscribe-cards .sub-card ul {
+  margin-top: 24px;
+}
+section.subscriptionManagement .subscribe-cards .sub-card ul li {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #191d23;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+section.subscriptionManagement .subscribe-cards .sub-card ul li:last-child {
+  margin-bottom: 0;
+}
+section.subscriptionManagement .subscribe-cards .sub-card.pro {
+  background: #ffffff;
+}
+section.subscriptionManagement ul.btns {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+  margin-bottom: 58px;
+}
+section.subscriptionManagement ul.btns li button {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 300;
 }/*# sourceMappingURL=style.css.map */
