@@ -578,13 +578,14 @@ section.partner-facilities-page .form-wrap ul {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 0 25px;
+  gap: 30px;
 }
 section.partner-facilities-page .form-wrap ul li {
-  width: 30%;
   background: #ffffff;
   border: 1px solid #2c2c2c;
   border-radius: 6px;
   padding: 15px;
+  flex: 1 0 30%;
 }
 section.partner-facilities-page .form-wrap ul li label {
   font-weight: 700;

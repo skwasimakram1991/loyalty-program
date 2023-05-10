@@ -33,7 +33,7 @@ function AddPartner() {
                   </div>
                 </div>
                 <div className='row'>
-                  <div className='col-lg-5'>
+                  <div className='col-lg-5 col-md-10'>
                     <h3>Partner Information</h3>
                     <p>
                       Partners are individuals, companies, or organizations that
@@ -46,14 +46,14 @@ function AddPartner() {
                     <div className='form-wrap'>
                       <form action=''>
                         <div className='row'>
-                          <div className='col-lg-6'>
+                          <div className='col-lg-6 col-md-6'>
                             <label htmlFor=''>Sponsor name</label>
                             <input
                               type='text'
                               placeholder='Enter sponsor’s name'
                             />
                           </div>
-                          <div className='col-lg-6'>
+                          <div className='col-lg-6 col-md-6'>
                             <label htmlFor=''>Sponsor name</label>
                             <input
                               type='text'
@@ -101,28 +101,28 @@ function AddPartner() {
                               id=''
                               placeholder='enter you ad description'></textarea>
                           </div>
-                          <div className='col-lg-6'>
+                          <div className='col-lg-6 col-md-6'>
                             <label htmlFor=''>Phone number</label>
                             <input
                               type='text'
                               placeholder='Enter phone number'
                             />
                           </div>
-                          <div className='col-lg-6'>
+                          <div className='col-lg-6 col-md-6'>
                             <label htmlFor=''>Email</label>
                             <input
                               type='text'
                               placeholder='Enter Email address'
                             />
                           </div>
-                          <div className='col-lg-6'>
+                          <div className='col-lg-6 col-md-6'>
                             <label htmlFor=''>Street address</label>
                             <input
                               type='text'
                               placeholder='Enter street address'
                             />
                           </div>
-                          <div className='col-lg-6'>
+                          <div className='col-lg-6 col-md-6'>
                             <label htmlFor=''>State</label>
                             <select name='' id='' required>
                               <option value='' selected disabled>
@@ -132,25 +132,25 @@ function AddPartner() {
                               <option value=''>Select state</option>
                             </select>
                           </div>
-                          <div className='col-lg-6'>
+                          <div className='col-lg-6 col-md-6'>
                             <label htmlFor=''>State</label>
                             <select name='' id=''>
                               <option value=''>Select state</option>
                             </select>
                           </div>
-                          <div className='col-lg-6'>
+                          <div className='col-lg-6 col-md-6'>
                             <label htmlFor=''>City</label>
                             <select name='' id=''>
                               <option value=''>Select City</option>
                             </select>
                           </div>
-                          <div className='col-lg-6'>
+                          <div className='col-lg-6 col-md-6'>
                             <label htmlFor=''>Country</label>
                             <select name='' id=''>
                               <option value=''>Select Country</option>
                             </select>
                           </div>
-                          <div className='col-lg-6'>
+                          <div className='col-lg-6 col-md-6'>
                             <label htmlFor=''>Zip Code</label>
                             <input type='text' placeholder='Enter zip code' />
                           </div>
