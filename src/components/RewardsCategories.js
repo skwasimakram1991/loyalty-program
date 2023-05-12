@@ -11,7 +11,7 @@ import partnerimg4 from '../assets/images/partner-img4.png';
 import partnerimg5 from '../assets/images/partner-img5.png';
 import partnerimg6 from '../assets/images/partner-img6.png';
 import editimg from '../assets/images/edit-icon.svg';
-
+import TableWrapper from '../assets/MicroComponents/TableWrapper';
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';
 import ToggleButton from '../assets/MicroComponents/ToggleButton';
@@ -50,165 +50,163 @@ function RewardsCategories() {
                   </div>
                   <div className='row'>
                     <div className='col-lg-12'>
-                      <div className='table-wrap'>
-                        <table>
-                          <tr>
-                            <th>reward Category name</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Status</th>
-                            <th>Edit</th>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src={partnerimg1} alt='' />
-                              FnB
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                              {/* <a href='#' className='qr-img'>
+                      <TableWrapper>
+                        <tr>
+                          <th>reward Category name</th>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                          <th>Status</th>
+                          <th>Edit</th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img src={partnerimg1} alt='' />
+                            FnB
+                          </td>
+                          <td></td>
+                          <td></td>
+                          <td>
+                            {/* <a href='#' className='qr-img'>
                                 <img src={qrcodeimg} alt='' />
                               </a> */}
-                            </td>
-                            <td>
-                              <ToggleButton />
-                            </td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={editimg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src={partnerimg2} alt='' />
-                              Merchandise
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                              {/* <a href='#' className='qr-img'>
+                          </td>
+                          <td>
+                            <ToggleButton />
+                          </td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={editimg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img src={partnerimg2} alt='' />
+                            Merchandise
+                          </td>
+                          <td></td>
+                          <td></td>
+                          <td>
+                            {/* <a href='#' className='qr-img'>
                                 <img src={qrcodeimg} alt='' />
                               </a> */}
-                            </td>
-                            <td>
-                              <ToggleButton />
-                            </td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={editimg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src={partnerimg1} alt='' />
-                              Coaching & Personal Training
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                              {/* <a href='#' className='qr-img'>
+                          </td>
+                          <td>
+                            <ToggleButton />
+                          </td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={editimg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img src={partnerimg1} alt='' />
+                            Coaching & Personal Training
+                          </td>
+                          <td></td>
+                          <td></td>
+                          <td>
+                            {/* <a href='#' className='qr-img'>
                                 <img src={qrcodeimg} alt='' />
                               </a> */}
-                            </td>
-                            <td>
-                              <ToggleButton />
-                            </td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={editimg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src={partnerimg3} alt='' />
-                              Memberships
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                              {/* <a href='#' className='qr-img'>
+                          </td>
+                          <td>
+                            <ToggleButton />
+                          </td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={editimg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img src={partnerimg3} alt='' />
+                            Memberships
+                          </td>
+                          <td></td>
+                          <td></td>
+                          <td>
+                            {/* <a href='#' className='qr-img'>
                                 <img src={qrcodeimg} alt='' />
                               </a> */}
-                            </td>
-                            <td>
-                              <ToggleButton />
-                            </td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={editimg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src={partnerimg4} alt='' />
-                              Nutrition
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                              {/* <a href='#' className='qr-img'>
+                          </td>
+                          <td>
+                            <ToggleButton />
+                          </td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={editimg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img src={partnerimg4} alt='' />
+                            Nutrition
+                          </td>
+                          <td></td>
+                          <td></td>
+                          <td>
+                            {/* <a href='#' className='qr-img'>
                                 <img src={qrcodeimg} alt='' />
                               </a> */}
-                            </td>
-                            <td>
-                              <ToggleButton />
-                            </td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={editimg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src={partnerimg5} alt='' />
-                              Rehabilitation & Wellness
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                              {/* <a href='#' className='qr-img'>
+                          </td>
+                          <td>
+                            <ToggleButton />
+                          </td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={editimg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img src={partnerimg5} alt='' />
+                            Rehabilitation & Wellness
+                          </td>
+                          <td></td>
+                          <td></td>
+                          <td>
+                            {/* <a href='#' className='qr-img'>
                                 <img src={qrcodeimg} alt='' />
                               </a> */}
-                            </td>
-                            <td>
-                              <ToggleButton />
-                            </td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={editimg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src={partnerimg6} alt='' />
-                              Sporting Events
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                              {/* <a href='#' className='qr-img'>
+                          </td>
+                          <td>
+                            <ToggleButton />
+                          </td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={editimg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img src={partnerimg6} alt='' />
+                            Sporting Events
+                          </td>
+                          <td></td>
+                          <td></td>
+                          <td>
+                            {/* <a href='#' className='qr-img'>
                                 <img src={qrcodeimg} alt='' />
                               </a> */}
-                            </td>
-                            <td>
-                              <ToggleButton />
-                            </td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={editimg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                        </table>
-                      </div>
+                          </td>
+                          <td>
+                            <ToggleButton />
+                          </td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={editimg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                      </TableWrapper>
                       <ul className='page-nation'>
                         <li>
                           <a href='#'>

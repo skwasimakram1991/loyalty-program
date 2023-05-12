@@ -7,7 +7,7 @@ import React from 'react';
 
 import Sidebar from '../assets/inc/Sidebar';
 import Header from '../assets/inc/Header';
-
+import TableWrapper from '../assets/MicroComponents/TableWrapper';
 import partnerimg1 from '../assets/images/partner-img1.png';
 import partnerimg2 from '../assets/images/partner-img2.png';
 import partnerimg3 from '../assets/images/partner-img3.png';
@@ -51,138 +51,136 @@ function UserLog() {
                   </div>
                   <div className='row'>
                     <div className='col-lg-12'>
-                      <div className='table-wrap'>
-                        <table>
-                          <tr>
-                            <th>user name</th>
-                            <th>user Code</th>
-                            <th>Company name</th>
-                            <th>Date</th>
-                            <th>Point earned</th>
-                            <th>View</th>
-                          </tr>
+                      <TableWrapper>
+                        <tr>
+                          <th>user name</th>
+                          <th>user Code</th>
+                          <th>Company name</th>
+                          <th>Date</th>
+                          <th>Point earned</th>
+                          <th>View</th>
+                        </tr>
 
-                          <tr>
-                            <td>Dianne Russell</td>
-                            <td>123456789</td>
-                            <td>
-                              <a href='#' className='partneer-img'>
-                                <img src={partnerimg2} alt='' />
-                              </a>
-                              (eBay
-                            </td>
-                            <td>25/03/2000</td>
-                            <td>50</td>
-                            <td>
-                              <a href='/ViewUserLog' className='edit-img'>
-                                <img src={viewImg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Cody Fisher</td>
-                            <td>123456789</td>
-                            <td>
-                              <a href='#' className='partneer-img'>
-                                <img src={partnerimg3} alt='' />
-                              </a>
-                              Bank of America
-                            </td>
-                            <td>25/03/2000</td>
-                            <td>50</td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={viewImg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Ralph Edwards</td>
-                            <td>123456789</td>
-                            <td>
-                              <a href='#' className='partneer-img'>
-                                <img src={partnerimg4} alt='' />
-                              </a>
-                              Starbucks
-                            </td>
-                            <td>25/03/2000</td>
-                            <td>50</td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={viewImg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Darlene Robertson</td>
-                            <td>123456789</td>
-                            <td>
-                              <a href='#' className='partneer-img'>
-                                <img src={partnerimg5} alt='' />
-                              </a>
-                              Facebook
-                            </td>
-                            <td>25/03/2000</td>
-                            <td>50</td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={viewImg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Leslie Alexander</td>
-                            <td>123456789</td>
-                            <td>
-                              <a href='#' className='partneer-img'>
-                                <img src={partnerimg6} alt='' />
-                              </a>
-                              IBM
-                            </td>
-                            <td>25/03/2000</td>
-                            <td>50</td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={viewImg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Robert Fox</td>
-                            <td>123456789</td>
-                            <td>
-                              <a href='#' className='partneer-img'>
-                                <img src={partnerimg1} alt='' />
-                              </a>
-                              L'Oréal
-                            </td>
-                            <td>25/03/2000</td>
-                            <td>50</td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={viewImg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Darrell Steward</td>
-                            <td>123456789</td>
-                            <td>
-                              <a href='#' className='partneer-img'>
-                                <img src={partnerimg5} alt='' />
-                              </a>
-                              Gillette
-                            </td>
-                            <td>25/03/2000</td>
-                            <td>50</td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={viewImg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                        </table>
-                      </div>
+                        <tr>
+                          <td>Dianne Russell</td>
+                          <td>123456789</td>
+                          <td>
+                            <a href='#' className='partneer-img'>
+                              <img src={partnerimg2} alt='' />
+                            </a>
+                            (eBay
+                          </td>
+                          <td>25/03/2000</td>
+                          <td>50</td>
+                          <td>
+                            <a href='/ViewUserLog' className='edit-img'>
+                              <img src={viewImg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Cody Fisher</td>
+                          <td>123456789</td>
+                          <td>
+                            <a href='#' className='partneer-img'>
+                              <img src={partnerimg3} alt='' />
+                            </a>
+                            Bank of America
+                          </td>
+                          <td>25/03/2000</td>
+                          <td>50</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={viewImg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Ralph Edwards</td>
+                          <td>123456789</td>
+                          <td>
+                            <a href='#' className='partneer-img'>
+                              <img src={partnerimg4} alt='' />
+                            </a>
+                            Starbucks
+                          </td>
+                          <td>25/03/2000</td>
+                          <td>50</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={viewImg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Darlene Robertson</td>
+                          <td>123456789</td>
+                          <td>
+                            <a href='#' className='partneer-img'>
+                              <img src={partnerimg5} alt='' />
+                            </a>
+                            Facebook
+                          </td>
+                          <td>25/03/2000</td>
+                          <td>50</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={viewImg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Leslie Alexander</td>
+                          <td>123456789</td>
+                          <td>
+                            <a href='#' className='partneer-img'>
+                              <img src={partnerimg6} alt='' />
+                            </a>
+                            IBM
+                          </td>
+                          <td>25/03/2000</td>
+                          <td>50</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={viewImg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Robert Fox</td>
+                          <td>123456789</td>
+                          <td>
+                            <a href='#' className='partneer-img'>
+                              <img src={partnerimg1} alt='' />
+                            </a>
+                            L'Oréal
+                          </td>
+                          <td>25/03/2000</td>
+                          <td>50</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={viewImg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Darrell Steward</td>
+                          <td>123456789</td>
+                          <td>
+                            <a href='#' className='partneer-img'>
+                              <img src={partnerimg5} alt='' />
+                            </a>
+                            Gillette
+                          </td>
+                          <td>25/03/2000</td>
+                          <td>50</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={viewImg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                      </TableWrapper>
                       <ul className='page-nation'>
                         <li>
                           <a href='#'>

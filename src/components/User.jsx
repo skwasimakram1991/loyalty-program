@@ -7,7 +7,7 @@ import Header from '../assets/inc/Header';
 import Footer from '../assets/inc/Footer';
 import viewImg from '../assets/images/view.svg';
 import editimg from '../assets/images/edit-icon.svg';
-
+import TableWrapper from '../assets/MicroComponents/TableWrapper';
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';
 import ColorCode from '../assets/MicroComponents/ColorCode';
@@ -31,102 +31,100 @@ function Tier() {
                   </div>
                   <div className='row'>
                     <div className='col-lg-12'>
-                      <div className='table-wrap'>
-                        <table>
-                          <tr>
-                            <th>user name</th>
-                            <th>user Code</th>
-                            <th>Email address</th>
-                            <th>Phone no</th>
-                            <th>total points</th>
-                            <th>View</th>
-                          </tr>
-                          <tr>
-                            <td>Darlene Robertson</td>
-                            <td>123456789</td>
-                            <td>nathan.roberts@example.com</td>
-                            <td>(308) 555-0121</td>
-                            <td>999</td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={viewImg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Annette Black</td>
-                            <td>123456789</td>
-                            <td>debbie.baker@example.com</td>
-                            <td>(808) 555-0111</td>
-                            <td>999</td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={viewImg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Wade Warren</td>
-                            <td>123456789</td>
-                            <td>debra.holt@example.com</td>
-                            <td>(217) 555-0113</td>
-                            <td>999</td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={viewImg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Ronald Richards</td>
-                            <td>123456789</td>
-                            <td>curtis.weaver@example.com</td>
-                            <td>(225) 555-0118</td>
-                            <td>999</td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={viewImg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Albert Flores</td>
-                            <td>123456789</td>
-                            <td>kenzi.lawson@example.com</td>
-                            <td>(208) 555-0112</td>
-                            <td>999</td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={viewImg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Brooklyn Simmons</td>
-                            <td>123456789</td>
-                            <td>sara.cruz@example.com</td>
-                            <td>(406) 555-0120</td>
-                            <td>999</td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={viewImg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Cameron Williamson</td>
-                            <td>123456789</td>
-                            <td>michelle.rivera@example.com</td>
-                            <td>(229) 555-0109</td>
-                            <td>999</td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={viewImg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                        </table>
-                      </div>
+                      <TableWrapper>
+                        <tr>
+                          <th>user name</th>
+                          <th>user Code</th>
+                          <th>Email address</th>
+                          <th>Phone no</th>
+                          <th>total points</th>
+                          <th>View</th>
+                        </tr>
+                        <tr>
+                          <td>Darlene Robertson</td>
+                          <td>123456789</td>
+                          <td>nathan.roberts@example.com</td>
+                          <td>(308) 555-0121</td>
+                          <td>999</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={viewImg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Annette Black</td>
+                          <td>123456789</td>
+                          <td>debbie.baker@example.com</td>
+                          <td>(808) 555-0111</td>
+                          <td>999</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={viewImg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Wade Warren</td>
+                          <td>123456789</td>
+                          <td>debra.holt@example.com</td>
+                          <td>(217) 555-0113</td>
+                          <td>999</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={viewImg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Ronald Richards</td>
+                          <td>123456789</td>
+                          <td>curtis.weaver@example.com</td>
+                          <td>(225) 555-0118</td>
+                          <td>999</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={viewImg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Albert Flores</td>
+                          <td>123456789</td>
+                          <td>kenzi.lawson@example.com</td>
+                          <td>(208) 555-0112</td>
+                          <td>999</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={viewImg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Brooklyn Simmons</td>
+                          <td>123456789</td>
+                          <td>sara.cruz@example.com</td>
+                          <td>(406) 555-0120</td>
+                          <td>999</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={viewImg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Cameron Williamson</td>
+                          <td>123456789</td>
+                          <td>michelle.rivera@example.com</td>
+                          <td>(229) 555-0109</td>
+                          <td>999</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={viewImg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                      </TableWrapper>
                     </div>
                   </div>
                 </div>

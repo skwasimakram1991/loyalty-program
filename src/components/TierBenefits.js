@@ -5,7 +5,7 @@ import logo from '../assets/images/logo.svg';
 import Sidebar from '../assets/inc/Sidebar';
 import Header from '../assets/inc/Header';
 import Footer from '../assets/inc/Footer';
-
+import TableWrapper from '../assets/MicroComponents/TableWrapper';
 import editimg from '../assets/images/edit-icon.svg';
 
 import { BsChevronLeft } from 'react-icons/bs';
@@ -73,93 +73,91 @@ function AddPartner() {
                   </div>
                   <div className='row'>
                     <div className='col-lg-12'>
-                      <div className='table-wrap'>
-                        <table>
-                          <tr>
-                            <th>Benefit name</th>
-                            <th>Discount code</th>
-                            <th>Discount %</th>
-                            <th>Tier name</th>
-                            <th>Sponsor category</th>
-                            <th>Edit</th>
-                          </tr>
-                          <tr>
-                            <td>Free Consultations + Follow ups</td>
-                            <td>adidas10</td>
-                            <td>10%</td>
-                            <td>Healthy Beginner</td>
-                            <td>FnB</td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={editimg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Discounts on Packages</td>
-                            <td>adidas10</td>
-                            <td>10%</td>
-                            <td>Intermediate Athlete</td>
-                            <td>FnB</td>
+                      <TableWrapper>
+                        <tr>
+                          <th>Benefit name</th>
+                          <th>Discount code</th>
+                          <th>Discount %</th>
+                          <th>Tier name</th>
+                          <th>Sponsor category</th>
+                          <th>Edit</th>
+                        </tr>
+                        <tr>
+                          <td>Free Consultations + Follow ups</td>
+                          <td>adidas10</td>
+                          <td>10%</td>
+                          <td>Healthy Beginner</td>
+                          <td>FnB</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={editimg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Discounts on Packages</td>
+                          <td>adidas10</td>
+                          <td>10%</td>
+                          <td>Intermediate Athlete</td>
+                          <td>FnB</td>
 
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={editimg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Free Consultations + Follow ups</td>
-                            <td>adidas10</td>
-                            <td>10%</td>
-                            <td>Advanced Athlete</td>
-                            <td>FnB</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={editimg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Free Consultations + Follow ups</td>
+                          <td>adidas10</td>
+                          <td>10%</td>
+                          <td>Advanced Athlete</td>
+                          <td>FnB</td>
 
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={editimg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Free Sessions</td>
-                            <td>adidas10</td>
-                            <td>10%</td>
-                            <td>Advanced Athlete</td>
-                            <td>FnB</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={editimg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Free Sessions</td>
+                          <td>adidas10</td>
+                          <td>10%</td>
+                          <td>Advanced Athlete</td>
+                          <td>FnB</td>
 
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={editimg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Free access to events</td>
-                            <td>adidas10</td>
-                            <td>10%</td>
-                            <td>Elite Athlete</td>
-                            <td>FnB</td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={editimg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Free Classes/Trials</td>
-                            <td>adidas10</td>
-                            <td>10%</td>
-                            <td>Ambassador</td>
-                            <td>FnB</td>
-                            <td>
-                              <a href='#' className='edit-img'>
-                                <img src={editimg} alt='' />
-                              </a>
-                            </td>
-                          </tr>
-                        </table>
-                      </div>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={editimg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Free access to events</td>
+                          <td>adidas10</td>
+                          <td>10%</td>
+                          <td>Elite Athlete</td>
+                          <td>FnB</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={editimg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Free Classes/Trials</td>
+                          <td>adidas10</td>
+                          <td>10%</td>
+                          <td>Ambassador</td>
+                          <td>FnB</td>
+                          <td>
+                            <a href='#' className='edit-img'>
+                              <img src={editimg} alt='' />
+                            </a>
+                          </td>
+                        </tr>
+                      </TableWrapper>
                     </div>
                   </div>
                 </div>

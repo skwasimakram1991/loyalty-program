@@ -209,6 +209,9 @@ section.menu-sec ul li.active > a img {
 section.menu-sec ul li.active > a:before {
   opacity: 1;
 }
+section.menu-sec .hamburger {
+  display: none;
+}
 
 header {
   border-bottom: 1px solid #e0e0e0;

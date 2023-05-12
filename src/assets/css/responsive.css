@@ -26,6 +26,12 @@
   section.subscriptionManagement .subscribe-cards .sub-card h5 {
     font-size: 44px;
   }
+  section.partner-facilities-page .table-wrap table {
+    width: 1200px;
+  }
+  section.partner-facilities-page .form-wrap label {
+    min-height: 50px;
+  }
 }
 @media (max-width: 1320px) {
   section.menu-sec ul li a {
@@ -80,9 +86,7 @@
     font-size: 10px;
     line-height: 17px;
   }
-  section.partner-facilities-page .table-wrap table {
-    width: 1200px;
-  }
+
   section.main-page-size .title-sec {
     padding: 0 0 36px;
   }
@@ -160,6 +164,10 @@
   section.subscriptionManagement .subscribe-cards .sub-card {
     padding: 22px 10px;
   }
+  section.partner-facilities-page .form-wrap label {
+    min-height: 42px;
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 990px) {
@@ -222,6 +230,17 @@
   }
   section.partner-facilities-page .form-wrap ul {
     margin-block: 15px;
+  }
+  section.partner-facilities-page .form-wrap label {
+    min-height: unset;
+    font-size: 16px;
+  }
+  section.partner-facilities-page
+    .form-wrap
+    input:not([type='submit']):not([type='radio']):not([type='checkbox']),
+  section.partner-facilities-page .form-wrap select,
+  section.partner-facilities-page .form-wrap textarea {
+    margin: 0 0 20px;
   }
 }
 
@@ -331,18 +350,18 @@
   }
   section.subscriptionManagement .subscribe-cards .sub-card h4 {
     font-size: 14px;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 10px;
   }
   section.subscriptionManagement .subscribe-cards .sub-card h5 {
     margin-block: 20px;
-    justify-content: center;
+    /* justify-content: center; */
   }
   section.subscriptionManagement .subscribe-cards .sub-card p {
-    text-align: center;
+    text-align: start;
   }
   section.subscriptionManagement .subscribe-cards .sub-card h6 {
-    text-align: center;
+    /* text-align: center; */
   }
   section.subscriptionManagement .subscribe-cards .sub-card ul li {
     text-align: start;
@@ -361,7 +380,7 @@
   section.subscriptionManagement .subscribe-cards .sub-card ul {
     margin-top: 24px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media (max-width: 580px) {
@@ -386,12 +405,73 @@
   }
   section.main-page-size .title-sec h2 {
     font-size: 18px;
-    line-height: 18px;
+    line-height: 24px;
   }
   section.subscriptionManagement .subscribe-cards {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     row-gap: 20px;
+  }
+  section.main-page-size .row {
+    flex-direction: column;
+    align-items: start !important;
+  }
+
+  section.main-page-size .row .col-lg-6 {
+    width: 100% !important;
+  }
+  section.main-page-size .title-sec {
+    padding: 0 0 14px;
+  }
+  section.partner-facilities-page.main-page-size.subscriptionManagement
+    .title-sec
+    h2 {
+    font-size: 25px;
+  }
+  /* section.subscriptionManagement .subscribe-cards .sub-card h4 {
+    justify-content: center;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card p {
+    text-align: center;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card h5 {
+    margin-block: 10px;
+    justify-content: center;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card ul {
+    grid-template-columns: repeat(2, 1fr);
+  } */
+  section.subscriptionManagement .subscribe-cards .sub-card h6 {
+    text-align: start;
+  }
+  footer p {
+    font-size: 10px;
+    line-height: 19px;
+  }
+  footer ul li a {
+    font-size: 10px;
+  }
+  ul.breadcrumbs li {
+    font-size: 12px;
+    line-height: 14px;
+    margin-right: 3px;
+  }
+  section.partner-facilities-page .userGrid h5 span {
+    font-size: 12px;
+    margin-top: 0;
+  }
+  section.partner-facilities-page .userGrid h5 {
+    font-size: 14px;
+  }
+  section.partner-facilities-page .form-wrap.head-form {
+    margin-top: 15px;
+  }
+  section.partner-facilities-page
+    .form-wrap
+    input:not([type='submit']):not([type='radio']):not([type='checkbox']),
+  section.partner-facilities-page .form-wrap select,
+  section.partner-facilities-page .form-wrap textarea {
+    height: 38px;
   }
 }
 @media (max-width: 480px) {
