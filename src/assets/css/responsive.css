@@ -1,0 +1,556 @@
+/** @format */
+
+@media (max-width: 1770px) {
+  section.menu-sec ul li a {
+    padding-left: 30px;
+  }
+  section.menu-sec ul li ul.sub-menu li a {
+    padding-left: 58px;
+  }
+}
+@media (max-width: 1590px) {
+  section.menu-sec ul li a {
+    padding-left: 18px;
+    font-size: 13px;
+    padding-block: 10px;
+  }
+  section.menu-sec2 ul li a {
+    padding-left: 30px;
+    font-size: 13px;
+    padding-block: 10px;
+  }
+  section.menu-sec ul li ul.sub-menu li a {
+    padding-left: 45px;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card h4 {
+    font-size: 20px;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card h4 img {
+    width: 14px;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card h5 {
+    font-size: 44px;
+  }
+  section.partner-facilities-page .table-wrap table {
+    width: 1200px;
+  }
+  /* section.partner-facilities-page .form-wrap label {
+    min-height: 50px;
+  } */
+}
+@media (max-width: 1320px) {
+  section.menu-sec ul li a {
+    padding-left: 18px;
+    padding-block: 6px;
+    font-size: 11px;
+  }
+  section.menu-sec ul li a img {
+    margin-right: 8px;
+    width: 14px;
+  }
+  header {
+    padding: 16px 14px;
+    padding-right: 40px;
+  }
+  section.main-page-size {
+    padding-right: 54px;
+  }
+  section.dashboard-page .sec1 .wrap h3 {
+    font-size: 22px;
+    line-height: 26px;
+    margin: 0;
+  }
+  section.dashboard-page .sec1 .wrap img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+  }
+  section.dashboard-page .sec1 .wrap {
+    padding: 24px;
+  }
+  section.main-page-size .title-sec {
+    padding: 0 0 38px;
+  }
+  section.dashboard-page .sec2 {
+    margin: 30px 0 0;
+  }
+  section.dashboard-page .sec2 {
+    padding: 25px 25px;
+  }
+  section.dashboard-page .sec2 > .row:first-child > * {
+    width: 100%;
+  }
+  section.dashboard-page .sec2 > .row:first-child > *:last-child {
+    margin-top: 20px;
+  }
+  header ul li h3 {
+    font-size: 14px;
+    margin-left: 12px;
+  }
+  header ul li h3 span {
+    font-size: 10px;
+    line-height: 17px;
+  }
+
+  section.main-page-size .title-sec {
+    padding: 0 0 36px;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card h4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card h5 {
+    font-size: 40px;
+    line-height: 40px;
+    gap: 5px;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card ul li {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card ul li img {
+    width: 12px;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card {
+    padding: 40px 10px;
+  }
+}
+
+@media (max-width: 1160px) {
+  section.menu-sec ul li a svg {
+    margin-top: 5px;
+  }
+  section.menu-sec ul li a {
+    padding-left: 12px;
+    padding-block: 4px;
+    font-size: 10px;
+  }
+  section.menu-sec ul li ul.sub-menu li a {
+    padding-left: 34px;
+  }
+  section.dashboard-page .sec1 .wrap {
+    padding: 20px;
+    flex-direction: column;
+    align-items: start;
+  }
+  section.dashboard-page .sec1 .wrap img {
+    width: 60px;
+    height: 60px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  section.menu-sec a.main-logo img {
+    max-width: 126px;
+  }
+  section.partner-facilities-page .form-wrap ul {
+    gap: 15px;
+  }
+  section.partner-facilities-page
+    .form-wrap
+    input:not([type='submit']):not([type='radio']):not([type='checkbox']),
+  section.partner-facilities-page .form-wrap select,
+  section.partner-facilities-page .form-wrap textarea {
+    margin: 0 0 15px;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card ul li {
+    align-items: start;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card h5 {
+    line-height: 30px;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card h4 {
+    font-size: 14px;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card {
+    padding: 22px 10px;
+  }
+  section.partner-facilities-page .form-wrap label {
+    min-height: 42px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 990px) {
+  section.menu-sec {
+    overflow: visible;
+    left: -170px;
+    transition: all 0.3s ease-in-out;
+  }
+  section.menu-sec .hamburger {
+    position: fixed;
+    top: 15px;
+    height: 36px;
+    display: grid;
+    font-size: 31px;
+    right: 22px;
+    background: #ffffff;
+    width: 36px;
+    transition: all 0.3s ease-in-out;
+    place-content: center;
+  }
+  section.menu-sec.show {
+    left: 0 !important;
+    transition: all 0.3s ease-in-out;
+  }
+  section.menu-sec.show .hamburger {
+    /* left: 200px !important;
+    top: 16px; */
+    transition: all 0.3s ease-in-out;
+  }
+  section.menu-sec {
+    left: -246px;
+    z-index: 9999;
+  }
+  section.menu-sec {
+    width: 200px;
+  }
+  header {
+    width: 100%;
+  }
+  section.main-page-size .title-sec {
+    padding: 0 0 22px;
+  }
+  section.main-page-size {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  section.dashboard-page .sec1 .wrap {
+    padding: 15px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  header {
+    padding: 16px 14px;
+    padding-right: 10px;
+  }
+  section.partner-facilities-page.main-page-size .title-sec .col-lg-6 {
+    width: 50%;
+  }
+  section.partner-facilities-page .form-wrap ul {
+    margin-block: 15px;
+  }
+  section.partner-facilities-page .form-wrap label {
+    min-height: unset;
+    font-size: 16px;
+  }
+  section.partner-facilities-page
+    .form-wrap
+    input:not([type='submit']):not([type='radio']):not([type='checkbox']),
+  section.partner-facilities-page .form-wrap select,
+  section.partner-facilities-page .form-wrap textarea {
+    margin: 0 0 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  section.main-page-size {
+    text-align: center;
+  }
+  section.dashboard-page .sec1 .wrap h3 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  section.dashboard-page .sec1 .wrap img {
+    width: 52px;
+    height: 52px;
+  }
+  section.dashboard-page .sec2 form {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  header ul li a img {
+    max-width: 40px;
+  }
+  section.main-page-size {
+    margin-top: 0;
+    padding-top: 100px;
+  }
+  section.dashboard-page .sec2 h3 {
+    margin-top: 0;
+  }
+  section.dashboard-page .sec1 .wrap {
+    padding: 10px;
+  }
+  header ul li .img-sec span {
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+  }
+  header ul li a img {
+    max-width: 34px;
+  }
+  header ul li h3 {
+    font-size: 12px;
+    margin-left: 7px;
+  }
+  header ul li h3 span {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  section.partner-facilities-page .table-wrap table th {
+    font-size: 14px;
+    line-height: 19px;
+    padding: 10px 10px 10px 20px;
+    text-align: start;
+  }
+  section.main-page-size .title-sec a.title-btn {
+    font-size: 12px;
+    line-height: 33px;
+    padding: 0 16px;
+    text-decoration: none;
+  }
+  section.partner-facilities-page .table-wrap table td {
+    padding: 10px 10px 10px 20px;
+    text-align: start;
+  }
+  section.partner-facilities-page .table-wrap table td a {
+    padding: 0;
+  }
+  section.partner-facilities-page .table-wrap table {
+    width: 930px;
+  }
+  ul.page-nation {
+    margin: 14px 0 0;
+    justify-content: center;
+  }
+  section.main-page-size .title-sec h2 {
+    font-size: 18px;
+    padding-top: 10px;
+  }
+  section.partner-facilities-page .form-wrap ul li {
+    text-align: start;
+    flex: 1 0 33%;
+  }
+  section.partner-facilities-page .form-wrap form {
+    text-align: start;
+  }
+  section.partner-facilities-page .form-wrap ul li label input[type='radio'] {
+    margin-right: 8px;
+    width: 14px;
+    height: 14px;
+  }
+  section.partner-facilities-page .form-wrap ul li label {
+    font-size: 15px;
+    margin: 0 0 5px;
+    cursor: pointer;
+  }
+  section.partner-facilities-page .form-wrap input[type='submit'] {
+    font-size: 16px;
+    justify-content: center;
+    padding: 13px 50px;
+    margin: 15px 0 0;
+    width: 100%;
+  }
+  footer {
+    padding: 10px 10px;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card h4 {
+    font-size: 14px;
+    /* justify-content: center; */
+    gap: 10px;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card h5 {
+    margin-block: 20px;
+    /* justify-content: center; */
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card p {
+    text-align: start;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card h6 {
+    /* text-align: center; */
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card ul li {
+    text-align: start;
+  }
+  section.partner-facilities-page.main-page-size.subscriptionManagement
+    .title-sec
+    h2 {
+    text-align: center;
+    font-size: 30px;
+  }
+  section.subscriptionManagement ul.btns {
+    margin-top: 20px;
+    margin-bottom: 7px;
+    justify-content: center;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card ul {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 580px) {
+  /* section.dashboard-page .sec1 .wrap h3 span {
+    line-height: 23px;
+    min-height: 47px;
+  } */
+  section.dashboard-page .sec1 .wrap img {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 10px;
+  }
+  section.dashboard-page .sec1 .wrap h3 span {
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0 0 4px;
+    letter-spacing: 0.5px;
+  }
+  section.dashboard-page .sec1 .wrap h3 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  section.main-page-size .title-sec h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  section.subscriptionManagement .subscribe-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+  }
+  section.main-page-size .row {
+    flex-direction: column;
+    align-items: start !important;
+  }
+  section.main-page-size.dashboard-page .row {
+    flex-direction: unset;
+    align-items: start !important;
+  }
+
+  section.main-page-size .row .col-lg-6 {
+    width: 100% !important;
+  }
+  section.main-page-size .title-sec {
+    padding: 0 0 14px;
+  }
+  section.partner-facilities-page.main-page-size.subscriptionManagement
+    .title-sec
+    h2 {
+    font-size: 25px;
+  }
+  /* section.subscriptionManagement .subscribe-cards .sub-card h4 {
+    justify-content: center;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card p {
+    text-align: center;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card h5 {
+    margin-block: 10px;
+    justify-content: center;
+  }
+  section.subscriptionManagement .subscribe-cards .sub-card ul {
+    grid-template-columns: repeat(2, 1fr);
+  } */
+  section.subscriptionManagement .subscribe-cards .sub-card h6 {
+    text-align: start;
+  }
+  footer p {
+    font-size: 10px;
+    line-height: 19px;
+  }
+  footer ul li a {
+    font-size: 10px;
+  }
+  ul.breadcrumbs li {
+    font-size: 12px;
+    line-height: 14px;
+    margin-right: 3px;
+  }
+  section.partner-facilities-page .userGrid h5 span {
+    font-size: 12px;
+    margin-top: 0;
+  }
+  section.partner-facilities-page .userGrid h5 {
+    font-size: 14px;
+  }
+  section.partner-facilities-page .form-wrap.head-form {
+    margin-top: 15px;
+  }
+  section.partner-facilities-page
+    .form-wrap
+    input:not([type='submit']):not([type='radio']):not([type='checkbox']),
+  section.partner-facilities-page .form-wrap select,
+  section.partner-facilities-page .form-wrap textarea {
+    height: 38px;
+  }
+  section.menu-sec .hamburger {
+    top: 13px;
+    font-size: 21px;
+    right: 10px;
+  }
+}
+@media (max-width: 480px) {
+  section.dashboard-page .sec1 .wrap img {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 0;
+    scale: 0.7;
+  }
+  section.dashboard-page .sec1 .wrap {
+    min-height: 130px;
+  }
+  section.dashboard-page .sec1 .wrap h3 {
+    font-size: 12px;
+  }
+  section.main-page-size {
+    padding-top: 92px;
+    padding-inline: 12px;
+  }
+  section.main-page-size .title-sec {
+    padding: 0 0 24px;
+  }
+  section.dashboard-page .sec2 {
+    margin: 26px 0 0;
+  }
+  section.dashboard-page .sec2 form {
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 12px;
+  }
+  section.dashboard-page .sec2 form > * {
+    width: 100%;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  section.dashboard-page .sec2 form input.date-pick {
+    height: 36px;
+    padding: 0 10px;
+    width: 100%;
+  }
+  section.dashboard-page .sec2 form input[type='submit'] {
+    background: #fa4248;
+    line-height: 32px;
+    padding: 0 45px;
+  }
+
+  section.partner-facilities-page .form-wrap ul {
+    flex-direction: column;
+  }
+  ul.breadcrumbs li a svg {
+    margin-left: 7px;
+  }
+  section.main-page-size {
+    padding-top: 80px;
+  }
+  section.partner-facilities-page .form-wrap {
+    padding: 20px;
+  }
+}
+section.main-page-size .title-sec h2 {
+  text-align: start;
+}
+
+@media (min-width: 991px) {
+  header a.logo img {
+    display: none;
+  }
+}
