@@ -83,7 +83,7 @@ function viewUserLog() {
                   </div>
                   <div className='col-lg-12 mr-t-24'>
                     <div className='table-wrap'>
-                      <table>
+                      <table class='table userTable'>
                         <tr>
                           <th>Company name</th>
 

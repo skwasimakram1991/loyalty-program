@@ -122,7 +122,7 @@ function AddPartner() {
                               placeholder='Enter street address'
                             />
                           </div>
-                          <div className='col-lg-6 col-md-6'>
+                          {/* <div className='col-lg-6 col-md-6'>
                             <label htmlFor=''>State</label>
                             <select name='' id='' required>
                               <option value='' selected disabled>
@@ -131,7 +131,7 @@ function AddPartner() {
                               <option value=''>Select state</option>
                               <option value=''>Select state</option>
                             </select>
-                          </div>
+                          </div> */}
                           <div className='col-lg-6 col-md-6'>
                             <label htmlFor=''>State</label>
                             <select name='' id=''>

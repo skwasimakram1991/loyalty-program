@@ -6,11 +6,13 @@ import Sidebar from '../assets/inc/Sidebar';
 import Header from '../assets/inc/Header';
 import Footer from '../assets/inc/Footer';
 import TableWrapper from '../assets/MicroComponents/TableWrapper';
+
 import editimg from '../assets/images/edit-icon.svg';
 
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';
 import ColorCode from '../assets/MicroComponents/ColorCode';
+import MainHeadForm from '../assets/MicroComponents/Forms/MainHeadForm';
 function AddPartner() {
   return (
     <div>
@@ -42,7 +44,7 @@ function AddPartner() {
                       </a>
                     </div>
                     <div className='col-lg-12'>
-                      <div className='form-wrap head-form'>
+                      {/* <div className='form-wrap head-form'>
                         <form action=''>
                           <div className='row'>
                             <div className='col-lg-4'>
@@ -68,7 +70,8 @@ function AddPartner() {
                             </div>
                           </div>
                         </form>
-                      </div>
+                      </div> */}
+                      <MainHeadForm />
                     </div>
                   </div>
                   <div className='row'>

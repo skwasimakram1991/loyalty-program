@@ -1,10 +1,11 @@
 /** @format */
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import { BsChevronRight } from 'react-icons/bs';
 import { VscChromeClose } from 'react-icons/vsc';
+import { VscMenu } from 'react-icons/vsc';
 import logo from '../images/logo.png';
 import img1 from '../images/menu-icon1.svg';
 import img2 from '../images/menu-icon2.svg';
@@ -23,6 +24,18 @@ function Sidebar() {
 
   //Javascript split method to get the name of the path in array
   const splitLocation = pathname.split('/');
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth > 768) {
+        setShow(false);
+      }
+    }
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <div>
       <section className={`menu-sec ${show ? 'show' : ''}`}>
@@ -31,7 +44,7 @@ function Sidebar() {
         </a>
         <ul>
           <li className={splitLocation[1] === 'Dashboard' ? 'active' : ''}>
-            <a href='/Dashboard'>
+            <a href='/'>
               <img src={img1} alt='' /> Dashboard
             </a>
           </li>
@@ -42,7 +55,7 @@ function Sidebar() {
                 : 'PartnerFacilities'
             }>
             <a href='/PartnerFacilities'>
-              <img src={img2} alt='' /> Partner Facilities
+              <img src={img3} alt='' /> Partner Facilities
             </a>
             <ul className='sub-menu'>
               <li>
@@ -93,6 +106,20 @@ function Sidebar() {
               </li>
             </ul>
           </li>
+          <li className={splitLocation[1] === 'payment' ? 'active' : 'payment'}>
+            <a href='/payment'>
+              <img src={img4} alt='' />
+              Payments <BsChevronRight />
+            </a>
+            <ul className='sub-menu'>
+              <li>
+                <a href='/facilitiesPayement'>Partner facilities payments</a>
+              </li>
+              <li>
+                <a href='/sponseredPayement'>Sponsored partner payments</a>
+              </li>
+            </ul>
+          </li>
           <li className={splitLocation[1] === 'user' ? 'active' : 'user'}>
             <a href='/user'>
               <img src={img5} alt='' /> User <BsChevronRight />
@@ -119,7 +146,7 @@ function Sidebar() {
           onClick={() => {
             setShow((prev) => !prev);
           }}>
-          <VscChromeClose />
+          {show ? <VscChromeClose /> : <VscMenu />}
         </div>
       </section>
     </div>

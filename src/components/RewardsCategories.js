@@ -60,10 +60,7 @@ function RewardsCategories() {
                           <th>Edit</th>
                         </tr>
                         <tr>
-                          <td>
-                            <img src={partnerimg1} alt='' />
-                            FnB
-                          </td>
+                          <td>FnB</td>
                           <td></td>
                           <td></td>
                           <td>
@@ -81,10 +78,7 @@ function RewardsCategories() {
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <img src={partnerimg2} alt='' />
-                            Merchandise
-                          </td>
+                          <td>Merchandise</td>
                           <td></td>
                           <td></td>
                           <td>
@@ -102,10 +96,7 @@ function RewardsCategories() {
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <img src={partnerimg1} alt='' />
-                            Coaching & Personal Training
-                          </td>
+                          <td>Coaching & Personal Training</td>
                           <td></td>
                           <td></td>
                           <td>
@@ -123,10 +114,7 @@ function RewardsCategories() {
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <img src={partnerimg3} alt='' />
-                            Memberships
-                          </td>
+                          <td>Memberships</td>
                           <td></td>
                           <td></td>
                           <td>
@@ -144,10 +132,7 @@ function RewardsCategories() {
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <img src={partnerimg4} alt='' />
-                            Nutrition
-                          </td>
+                          <td>Nutrition</td>
                           <td></td>
                           <td></td>
                           <td>
@@ -165,10 +150,7 @@ function RewardsCategories() {
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <img src={partnerimg5} alt='' />
-                            Rehabilitation & Wellness
-                          </td>
+                          <td>Rehabilitation & Wellness</td>
                           <td></td>
                           <td></td>
                           <td>
@@ -186,10 +168,7 @@ function RewardsCategories() {
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <img src={partnerimg6} alt='' />
-                            Sporting Events
-                          </td>
+                          <td>Sporting Events</td>
                           <td></td>
                           <td></td>
                           <td>

@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 function Chartdate() {
-  const [startDate, setStartDate] = useState(new Date());
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
   return (
     <>
       <div className='col-lg-6 col-md-6'>
@@ -18,9 +19,9 @@ function Chartdate() {
 
           <DatePicker
             className='date-pick'
-            selected={startDate}
+            selected={endDate}
             placeholderText={'End Date'}
-            onChange={(date) => setStartDate(date)}
+            onChange={(date) => setEndDate(date)}
           />
           <input type='submit' value='Export' />
         </form>

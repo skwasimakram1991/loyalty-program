@@ -5,12 +5,17 @@
     padding-left: 30px;
   }
   section.menu-sec ul li ul.sub-menu li a {
-    padding-left: 65px;
+    padding-left: 58px;
   }
 }
 @media (max-width: 1590px) {
   section.menu-sec ul li a {
     padding-left: 18px;
+    font-size: 13px;
+    padding-block: 10px;
+  }
+  section.menu-sec2 ul li a {
+    padding-left: 30px;
     font-size: 13px;
     padding-block: 10px;
   }
@@ -29,9 +34,9 @@
   section.partner-facilities-page .table-wrap table {
     width: 1200px;
   }
-  section.partner-facilities-page .form-wrap label {
+  /* section.partner-facilities-page .form-wrap label {
     min-height: 50px;
-  }
+  } */
 }
 @media (max-width: 1320px) {
   section.menu-sec ul li a {
@@ -178,14 +183,13 @@
   }
   section.menu-sec .hamburger {
     position: fixed;
-    top: 16px;
+    top: 15px;
     height: 36px;
     display: grid;
-    font-size: 22px;
-    left: 1px;
-    background: #fafafa;
+    font-size: 31px;
+    right: 22px;
+    background: #ffffff;
     width: 36px;
-    box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
     place-content: center;
   }
@@ -194,8 +198,8 @@
     transition: all 0.3s ease-in-out;
   }
   section.menu-sec.show .hamburger {
-    left: 200px !important;
-    top: 16px;
+    /* left: 200px !important;
+    top: 16px; */
     transition: all 0.3s ease-in-out;
   }
   section.menu-sec {
@@ -416,6 +420,10 @@
     flex-direction: column;
     align-items: start !important;
   }
+  section.main-page-size.dashboard-page .row {
+    flex-direction: unset;
+    align-items: start !important;
+  }
 
   section.main-page-size .row .col-lg-6 {
     width: 100% !important;
@@ -473,6 +481,11 @@
   section.partner-facilities-page .form-wrap textarea {
     height: 38px;
   }
+  section.menu-sec .hamburger {
+    top: 13px;
+    font-size: 21px;
+    right: 10px;
+  }
 }
 @media (max-width: 480px) {
   section.dashboard-page .sec1 .wrap img {
@@ -518,13 +531,7 @@
     line-height: 32px;
     padding: 0 45px;
   }
-  section.menu-sec .hamburger {
-    top: 23px;
-    height: 22px;
-    font-size: 12px;
-    left: 1px;
-    width: 34px;
-  }
+
   section.partner-facilities-page .form-wrap ul {
     flex-direction: column;
   }
@@ -540,4 +547,10 @@
 }
 section.main-page-size .title-sec h2 {
   text-align: start;
+}
+
+@media (min-width: 991px) {
+  header a.logo img {
+    display: none;
+  }
 }

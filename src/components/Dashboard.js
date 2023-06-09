@@ -24,9 +24,9 @@ function Dashboard() {
                   </div>
                 </div>
                 <DashList />
-                <Chart title='User' />
-                <Chart title='Partner Facility' />
-                <Chart title='Sponsored Partner' />
+                <Chart title='User stats' />
+                <Chart title='partner facility stats' />
+                <Chart title='Sponsored partner stats' />
               </section>
             </div>
           </div>
