@@ -6,10 +6,10 @@
 import React, { useState } from 'react';
 
 import Sidebar from './Sidebar/Sidebar';
-import Header from '../../assets/inc/Header';
-import Footer from '../../assets/inc/Footer';
+import Header from '../../Component/Header/Header';
+import Footer from '../../Component/Footer/Footer';
 import 'react-datepicker/dist/react-datepicker.css';
-import TableWrapper from '../../assets/MicroComponents/TableWrapper';
+import TableWrapper from '../../Component/TableWrapper/TableWrapper';
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';
 

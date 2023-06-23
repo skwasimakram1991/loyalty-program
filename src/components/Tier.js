@@ -2,9 +2,9 @@
 
 import React from 'react';
 import logo from '../assets/images/logo.svg';
-import Sidebar from '../assets/inc/Sidebar';
-import Header from '../assets/inc/Header';
-import Footer from '../assets/inc/Footer';
+import Sidebar from '../Component/Sidebar/Sidebar';
+import Header from '../Component/Header/Header';
+import Footer from '../Component/Footer/Footer';
 import partnerimg1 from '../assets/images/partner-img1.png';
 import partnerimg2 from '../assets/images/partner-img2.png';
 import partnerimg3 from '../assets/images/partner-img3.png';
@@ -12,7 +12,7 @@ import partnerimg4 from '../assets/images/partner-img4.png';
 import partnerimg5 from '../assets/images/partner-img5.png';
 import partnerimg6 from '../assets/images/partner-img6.png';
 import editimg from '../assets/images/edit-icon.svg';
-import TableWrapper from '../assets/MicroComponents/TableWrapper';
+import TableWrapper from '../Component/TableWrapper/TableWrapper';
 
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';

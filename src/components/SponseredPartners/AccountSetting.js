@@ -4,8 +4,8 @@
 import React from 'react';
 import logo from '../../assets/images/logo.svg';
 import Sidebar from './Sidebar/Sidebar';
-import Header from '../../assets/inc/Header';
-import Footer from '../../assets/inc/Footer';
+import Header from '../../Component/Header/Header';
+import Footer from '../../Component/Footer/Footer';
 import { BsChevronRight } from 'react-icons/bs';
 
 function AccountSetting() {

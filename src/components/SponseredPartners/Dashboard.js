@@ -2,14 +2,14 @@
 
 import React, { useState } from 'react';
 import Sidebar from './Sidebar/Sidebar';
-import Header from '../../assets/inc/Header';
-import Footer from '../../assets/inc/Footer';
+import Header from '../../Component/Header/Header';
+import Footer from '../../Component/Footer/Footer';
 import Dash2Img1 from '../../assets/images/dash3-img1.png';
 import Dash2Img2 from '../../assets/images/dash3-img2.png';
-import Chart from '../../assets/MicroComponents/Charts/Chart';
+// import Chart from '../../assets/MicroComponents/Charts/Chart';
 import qr from '../../assets/images/q2.png';
-import Chartdate from '../../assets/MicroComponents/Charts/Chartdate';
-import TableWrapper from '../../assets/MicroComponents/TableWrapper';
+// import Chartdate from '../../assets/MicroComponents/Charts/Chartdate';
+import TableWrapper from '../../Component/TableWrapper/TableWrapper';
 
 function Dashboard() {
   return (
@@ -52,13 +52,13 @@ function Dashboard() {
                     </div>
                   </div>
                 </div>
-                <Chart title='redemption History' />
+                {/* <Chart title='redemption History' /> */}
                 <div className='sec2'>
                   <div className='row align-items-center'>
                     <div className='col-lg-6 col-md-6'>
                       <h3>used Coupons</h3>
                     </div>
-                    <Chartdate />
+                    {/* <Chartdate /> */}
                   </div>
                   <div className='row'>
                     <div className='col-lg-12'>

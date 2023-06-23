@@ -1,12 +1,12 @@
 /** @format */
 
 import React from 'react';
-import userimg from '../images/user-img.png';
-import Logo from '../images/logo.png';
+import userimg from '../../assets/images/user-img.png';
+import Logo from '../../assets/images/logo.png';
 
 function Header() {
   return (
-    <div>
+    <>
       <header>
         <div className='container-fluid'>
           <div className='row'>
@@ -33,7 +33,7 @@ function Header() {
           </div>
         </div>
       </header>
-    </div>
+    </>
   );
 }
 

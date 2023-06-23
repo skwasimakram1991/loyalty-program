@@ -2,12 +2,12 @@
 
 import React from 'react';
 import logo from '../assets/images/logo.svg';
-import Sidebar from '../assets/inc/Sidebar';
-import Header from '../assets/inc/Header';
-import Footer from '../assets/inc/Footer';
+import Sidebar from '../Component/Sidebar/Sidebar';
+import Header from '../Component/Header/Header';
+import Footer from '../Component/Footer/Footer';
 import viewImg from '../assets/images/view.svg';
 import editimg from '../assets/images/edit-icon.svg';
-import TableWrapper from '../assets/MicroComponents/TableWrapper';
+import TableWrapper from '../Component/TableWrapper/TableWrapper';
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';
 import ColorCode from '../assets/MicroComponents/ColorCode';

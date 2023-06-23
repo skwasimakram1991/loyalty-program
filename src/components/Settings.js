@@ -2,10 +2,10 @@
 
 import React from 'react';
 import logo from '../assets/images/logo.svg';
-import Sidebar from '../assets/inc/Sidebar';
-import Header from '../assets/inc/Header';
+import Sidebar from '../Component/Sidebar/Sidebar';
+import Header from '../Component/Header/Header';
 import { BsChevronRight } from 'react-icons/bs';
-import Footer from '../assets/inc/Footer';
+import Footer from '../Component/Footer/Footer';
 
 function Settings() {
   return (

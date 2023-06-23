@@ -5,8 +5,8 @@
 
 import React, { useState } from 'react';
 
-import Sidebar from '../assets/inc/Sidebar';
-import Header from '../assets/inc/Header';
+import Sidebar from '../Component/Sidebar/Sidebar';
+import Header from '../Component/Header/Header';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import partnerimg1 from '../assets/images/partner-img1.png';
@@ -16,7 +16,7 @@ import partnerimg4 from '../assets/images/partner-img4.png';
 import partnerimg5 from '../assets/images/partner-img5.png';
 import partnerimg6 from '../assets/images/partner-img6.png';
 import editimg from '../assets/images/edit-icon.svg';
-import TableWrapper from '../assets/MicroComponents/TableWrapper';
+import TableWrapper from '../Component/TableWrapper/TableWrapper';
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';
 

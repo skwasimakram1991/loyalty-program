@@ -1,7 +1,7 @@
 /** @format */
 
 import React from 'react';
-import img1 from '../../../assets/images/dashboard-img1.svg';
+// import img1 from '../../../assets/images/dashboard-img1.svg';
 function Dashcard({ img, title, amount }) {
   return (
     <>
@@ -13,10 +13,8 @@ function Dashcard({ img, title, amount }) {
             {amount}
           </h3>
         </div>
-        {/* test   new */}
       </div>
     </>
   );
 }
-
 export default Dashcard;

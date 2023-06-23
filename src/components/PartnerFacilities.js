@@ -5,8 +5,8 @@
 
 import React from 'react';
 
-import Sidebar from '../assets/inc/Sidebar';
-import Header from '../assets/inc/Header';
+import Sidebar from '../Component/Sidebar/Sidebar';
+import Header from '../Component/Header/Header';
 
 import partnerimg1 from '../assets/images/partner-img1.png';
 import partnerimg2 from '../assets/images/partner-img2.png';

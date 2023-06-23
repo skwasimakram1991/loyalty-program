@@ -526,6 +526,9 @@ footer {
   border-top: 0.5px solid #e0e0e0;
   padding: 10px 68px;
   position: relative;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background: #fff;
   p {
     font-weight: 400;

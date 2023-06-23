@@ -6,13 +6,13 @@ import { useLocation } from 'react-router-dom';
 import { BsChevronRight } from 'react-icons/bs';
 import { VscChromeClose } from 'react-icons/vsc';
 import { VscMenu } from 'react-icons/vsc';
-import logo from '../images/logo.png';
-import img1 from '../images/menu-icon1.svg';
-import img2 from '../images/menu-icon2.svg';
-import img3 from '../images/menu-icon3.svg';
-import img4 from '../images/menu-icon4.svg';
-import img5 from '../images/menu-icon5.svg';
-import img6 from '../images/menu-icon6.svg';
+import logo from '../../assets/images/logo.png';
+import img1 from '../../assets/images/menu-icon1.svg';
+import img2 from '../../assets/images/menu-icon2.svg';
+import img3 from '../../assets/images/menu-icon3.svg';
+import img4 from '../../assets/images/menu-icon4.svg';
+import img5 from '../../assets/images/menu-icon5.svg';
+import img6 from '../../assets/images/menu-icon6.svg';
 
 function Sidebar() {
   const [show, setShow] = useState(false);
@@ -37,7 +37,7 @@ function Sidebar() {
     };
   }, []);
   return (
-    <div>
+    <>
       <section className={`menu-sec ${show ? 'show' : ''}`}>
         <a href='#' className='main-logo'>
           <img src={logo} alt='' />
@@ -149,7 +149,7 @@ function Sidebar() {
           {show ? <VscChromeClose /> : <VscMenu />}
         </div>
       </section>
-    </div>
+    </>
   );
 }
 

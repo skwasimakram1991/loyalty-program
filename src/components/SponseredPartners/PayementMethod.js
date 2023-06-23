@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Header from './Header/Header';
-import Footer from '../../assets/inc/Footer';
+import Footer from '../../Component/Footer/Footer';
 
 function PayementMethod() {
   return (

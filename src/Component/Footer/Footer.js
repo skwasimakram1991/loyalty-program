@@ -4,7 +4,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <div>
+    <>
       <footer>
         <div className='container-fluid'>
           <div className='row'>
@@ -21,7 +21,7 @@ function Footer() {
           </div>
         </div>
       </footer>
-    </div>
+    </>
   );
 }
 

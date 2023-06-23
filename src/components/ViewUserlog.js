@@ -2,11 +2,11 @@
 
 import React from 'react';
 import logo from '../assets/images/logo.svg';
-import Sidebar from '../assets/inc/Sidebar';
-import Header from '../assets/inc/Header';
+import Sidebar from '../Component/Sidebar/Sidebar';
+import Header from '../Component/Header/Header';
 import viewImg from '../assets/images/view.svg';
 import { BsChevronRight } from 'react-icons/bs';
-import Footer from '../assets/inc/Footer';
+import Footer from '../Component/Footer/Footer';
 import partnerimg1 from '../assets/images/partner-img1.png';
 import partnerimg2 from '../assets/images/partner-img2.png';
 import partnerimg3 from '../assets/images/partner-img3.png';

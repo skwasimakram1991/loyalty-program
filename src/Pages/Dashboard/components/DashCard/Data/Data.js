@@ -1,5 +1,5 @@
 /** @format */
-import img1 from '../../../../assets/images/dashboard-img1.svg';
+import img1 from '../../../img/dashboard-img1.svg';
 export const cardData = [
   {
     id: 1,
