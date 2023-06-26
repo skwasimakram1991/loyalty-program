@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, NavLink, Link } from 'react-router-dom';
 
 import { BsChevronRight } from 'react-icons/bs';
 import { VscChromeClose } from 'react-icons/vsc';
@@ -24,6 +24,7 @@ function Sidebar() {
 
   //Javascript split method to get the name of the path in array
   const splitLocation = pathname.split('/');
+  console.log(splitLocation[splitLocation.length - 1]);
 
   useEffect(() => {
     function handleResize() {
@@ -43,70 +44,126 @@ function Sidebar() {
           <img src={logo} alt='' />
         </a>
         <ul>
-          <li className={splitLocation[1] === 'Dashboard' ? 'active' : ''}>
-            <a href='/'>
+          <li>
+            <NavLink to='/dashboard'>
               <img src={img1} alt='' /> Dashboard
-            </a>
+            </NavLink>
           </li>
-          <li
-            className={
-              splitLocation[1] === 'PartnerFacilities'
-                ? 'active'
-                : 'PartnerFacilities'
-            }>
-            <a href='/PartnerFacilities'>
+          <li>
+            <span
+              className={`${splitLocation[1] === 'partner' ? 'active' : ''}`}>
               <img src={img3} alt='' /> Partner Facilities
-            </a>
+              <BsChevronRight />
+            </span>
             <ul className='sub-menu'>
-              <li>
-                <a href='/PartnerFacilities'>Partner Facilities</a>
+              <li
+                className={`${
+                  splitLocation[splitLocation.length - 1] === 'partner'
+                    ? 'active'
+                    : ''
+                }`}>
+                <Link to='/partner'>Partner Facilities</Link>
               </li>
               <li
-                className={
-                  splitLocation[1] === 'Rewards' ? 'active' : 'Rewards'
-                }>
-                <a href='/SubscriptionMangement'>Subscription Management</a>
+                className={`${
+                  splitLocation[splitLocation.length - 1] === 'subscription'
+                    ? 'active'
+                    : ''
+                }`}>
+                <Link to='/partner/subscription'>Subscription Management</Link>
               </li>
             </ul>
           </li>
-          <li className={splitLocation[1] === 'sponsor' ? 'active' : 'sponsor'}>
-            <a href='/sponsor'>
-              <img src={img3} alt='' />
-              Sponsored partner <BsChevronRight />
-            </a>
+          <li>
+            <span
+              className={`${splitLocation[1] === 'sponser' ? 'active' : ''}`}>
+              <img src={img3} alt='' /> Sponsored partner
+              <BsChevronRight />
+            </span>
             <ul className='sub-menu'>
-              <li>
-                <a href='#'>Sponsored partner</a>
+              <li
+                className={`${
+                  splitLocation[splitLocation.length - 1] === 'sponser'
+                    ? 'active'
+                    : ''
+                }`}>
+                <Link to='/sponser'>Sponsored partner</Link>
               </li>
               <li
-                className={
-                  splitLocation[1] === 'Rewards' ? 'active' : 'Rewards'
-                }>
-                <a href='/Rewards'>Sponsored category</a>
+                className={`${
+                  splitLocation[splitLocation.length - 1] === 'cattegory'
+                    ? 'active'
+                    : ''
+                }`}>
+                <Link to='sponser/cattegory'>Sponsored category</Link>
               </li>
               <li
-                className={
-                  splitLocation[1] === 'Rewards' ? 'active' : 'Rewards'
-                }>
-                <a href='/SubscriptionMangement'>Subscription Management</a>
+                className={`${
+                  splitLocation[splitLocation.length - 1] === 'subscription'
+                    ? 'active'
+                    : ''
+                }`}>
+                <Link to='sponser/subscription'>Subscription Management</Link>
               </li>
             </ul>
           </li>
-          <li className={splitLocation[1] === 'Tier' ? 'active' : 'Tier'}>
-            <a href='/Tier'>
-              <img src={img4} alt='' />
-              Tier <BsChevronRight />
-            </a>
+          <li>
+            <span className={`${splitLocation[1] === 'tier' ? 'active' : ''}`}>
+              <img src={img3} alt='' /> Tier
+              <BsChevronRight />
+            </span>
             <ul className='sub-menu'>
-              <li>
-                <a href='/Tier'>Tier Management</a>
+              <li
+                className={`${
+                  splitLocation[splitLocation.length - 1] === 'tier'
+                    ? 'active'
+                    : ''
+                }`}>
+                <Link to='tier'>Tier Management</Link>
               </li>
-              <li>
-                <a href='/tierbenefits'>Tier Benefits</a>
+              <li
+                className={`${
+                  splitLocation[splitLocation.length - 1] === 'benefits'
+                    ? 'active'
+                    : ''
+                }`}>
+                <Link to='tier/benefits'>Tier Benefits</Link>
+              </li>
+              <li
+                className={`${
+                  splitLocation[splitLocation.length - 1] === 'subscription'
+                    ? 'active'
+                    : ''
+                }`}>
+                <Link to='tier/subscription'>Subscription Management</Link>
               </li>
             </ul>
           </li>
-          <li className={splitLocation[1] === 'payment' ? 'active' : 'payment'}>
+          <li>
+            <span className={`${splitLocation[1] === 'tier' ? 'active' : ''}`}>
+              <img src={img3} alt='' /> Payments
+              <BsChevronRight />
+            </span>
+            <ul className='sub-menu'>
+              <li
+                className={`${
+                  splitLocation[splitLocation.length - 1] === 'tier'
+                    ? 'active'
+                    : ''
+                }`}>
+                <Link to='tier'>Partner facilities payments</Link>
+              </li>
+              <li
+                className={`${
+                  splitLocation[splitLocation.length - 1] === 'benefits'
+                    ? 'active'
+                    : ''
+                }`}>
+                <Link to='tier/benefits'>Sponsored partner payments</Link>
+              </li>
+            </ul>
+          </li>
+          {/* <li className={splitLocation[1] === 'payment' ? 'active' : 'payment'}>
             <a href='/payment'>
               <img src={img4} alt='' />
               Payments <BsChevronRight />
@@ -119,7 +176,7 @@ function Sidebar() {
                 <a href='/sponseredPayement'>Sponsored partner payments</a>
               </li>
             </ul>
-          </li>
+          </li> */}
           <li className={splitLocation[1] === 'user' ? 'active' : 'user'}>
             <a href='/user'>
               <img src={img5} alt='' /> User <BsChevronRight />

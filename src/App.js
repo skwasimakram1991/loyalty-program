@@ -44,6 +44,10 @@ import ManageSubscription2 from './components/SponseredPartners/ManageSubscripti
 import AccountSetting2 from './components/SponseredPartners/AccountSetting';
 import ManagePay2 from './components/SponseredPartners/ManagePay';
 import PayementMethod2 from './components/SponseredPartners/PayementMethod';
+import Header from './Component/Header/Header';
+import Sidebar from './Component/Sidebar/Sidebar';
+import Footer from './Component/Footer/Footer';
+import DashboardRoutes from './DashboardRoutes';
 
 function App() {
   return (
@@ -95,36 +99,9 @@ function App() {
     //     <Route exact path='/PayementMethod2' component={PayementMethod2} />
     //   </Switch>
     // </Router>
+
     <>
-      <Routes>
-        <Route
-          path='/'
-          element={
-            <DashboardLayout>
-              <Dashboard />
-            </DashboardLayout>
-          }></Route>
-        <Route path='/partners'>
-          <Route
-            index
-            element={
-              <DashboardLayout>
-                <PartnerFacilities />
-              </DashboardLayout>
-            }
-          />
-          <Route
-            path='add'
-            element={
-              <DashboardLayout>
-                <AddPartner />
-              </DashboardLayout>
-            }
-          />
-        </Route>
-        <Route path='/login' element={<Login />} />
-        <Route path='*' element={<h2>Not Found</h2>} />
-      </Routes>
+      <DashboardRoutes />
     </>
   );
 }

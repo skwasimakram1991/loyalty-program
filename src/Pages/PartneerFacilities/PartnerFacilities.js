@@ -27,7 +27,7 @@ function PartnerFacilities() {
             <h2>Partner Facilities</h2>
           </div>
           <div className='col-lg-6 text-end'>
-            <a href='/AddPartner' className='title-btn'>
+            <a href='/partner/add' className='title-btn'>
               Add Partner
             </a>
           </div>
