@@ -8,6 +8,7 @@ import PartnersFacilitiesLayout from './Layout/PartnersFacilitiesLayout/Partners
 import SponseredPartnersLayout from './Layout/SponseredPartnersLayout/SponseredPartnersLayout';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Login from './Pages/Login';
+import Settings from './Pages/Settings';
 import PartnerFacilities from './Pages/PartneerFacilities/PartnerFacilities';
 import AddPartner from './Pages/PartneerFacilities/AddPartner';
 import SubscriptionMangement from './Pages/PartneerFacilities/SubscriptionMangement';
@@ -21,6 +22,15 @@ function DashboardRoutes() {
         <Route path='/' element={<Adminlayout />}>
           <Route path='/' element={<Navigate replace to='dashboard' />} />
           <Route path='dashboard' element={<Dashboard />}></Route>
+          <Route path='settings' element={<Settings />}></Route>
+          <Route
+            path='payments'
+            element={<Navigate replace to='/partner-payments' />}
+          />
+          <Route
+            path='partner-payments'
+            element={<PartnerFacilities />}></Route>
+          <Route path='sponser-payments' element={<AddPartner />}></Route>
           <Route path='partner/'>
             <Route index element={<PartnerFacilities />} />
             <Route path='addpartner' element={<AddPartner />} />
@@ -38,11 +48,9 @@ function DashboardRoutes() {
             <Route path='benefits' element={<AddPartner />} />
             <Route path='subscription' element={<SubscriptionMangement />} />
           </Route>
-          <Route
-            path='payments'
-            element={<Navigate replace to='/payments/partner' />}>
-            <Route path='/payments/partner' element={<PartnerFacilities />} />
-            <Route path='/payments/sponser' element={<AddPartner />} />
+          <Route path='user/'>
+            <Route index element={<PartnerFacilities />} />
+            <Route path='log' element={<AddPartner />} />
           </Route>
         </Route>
         <Route path='/login' element={<Login />} />

@@ -72,6 +72,16 @@ section.login-page {
   background: url(../../assets/images/login-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  .login-row {
+    margin-bottom: 20px;
+  }
+  small.error {
+    text-align: left;
+    display: block;
+    color: #fa4248;
+    font-weight: 400;
+    font-size: 14px;
+  }
   .wrap {
     background: #ffffff;
     box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.1);
@@ -102,13 +112,12 @@ section.login-page {
     border-radius: 4px;
     width: 100%;
     padding: 15px;
-    margin: 0 0 24px;
+    margin: 0 0 8px;
   }
   .check-box {
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
-    color: #212529;
     display: flex;
     align-items: center;
     margin: 0 0 32px;
@@ -206,7 +215,7 @@ section.menu-sec {
         text-transform: capitalize;
         color: #2c2c2c;
         padding: 15px;
-        padding-left: 30px;
+        padding-left: 33px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -242,6 +251,9 @@ section.menu-sec {
       ul.sub-menu {
         padding: 0;
         li {
+          a {
+            padding-left: 65px;
+          }
           &.active {
             a {
               background-color: transparent;
@@ -251,7 +263,7 @@ section.menu-sec {
                 background-color: transparent;
               }
 
-              padding-left: 58px;
+              padding-left: 65px;
             }
           }
         }

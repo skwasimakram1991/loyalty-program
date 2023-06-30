@@ -67,9 +67,19 @@ section.login-page {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(../images/login-bg.jpg);
+  background: url(../../assets/images/login-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+section.login-page .login-row {
+  margin-bottom: 20px;
+}
+section.login-page small.error {
+  text-align: left;
+  display: block;
+  color: #fa4248;
+  font-weight: 400;
+  font-size: 14px;
 }
 section.login-page .wrap {
   background: #ffffff;
@@ -100,13 +110,12 @@ section.login-page input:not([type=submit]):not([type=checkbox]) {
   border-radius: 4px;
   width: 100%;
   padding: 15px;
-  margin: 0 0 24px;
+  margin: 0 0 8px;
 }
 section.login-page .check-box {
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
-  color: #212529;
   display: flex;
   align-items: center;
   margin: 0 0 32px;
@@ -153,7 +162,7 @@ section.menu-sec a.main-logo img {
   display: table;
 }
 section.menu-sec ul {
-  padding: 8px 0;
+  padding: 8px 0 60px;
 }
 section.menu-sec ul li a {
   font-weight: 400;
@@ -162,7 +171,7 @@ section.menu-sec ul li a {
   text-transform: capitalize;
   color: #2c2c2c;
   padding: 15px;
-  padding-left: 65px;
+  padding-left: 30px;
   width: 100%;
   display: table;
   position: relative;
@@ -193,20 +202,67 @@ section.menu-sec ul li a img {
 section.menu-sec ul li a svg {
   float: right;
 }
+section.menu-sec ul li span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: #2c2c2c;
+  padding: 15px;
+  padding-left: 33px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+section.menu-sec ul li span:before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background: #fa4248;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+section.menu-sec ul li span img {
+  margin-right: 10px;
+}
+section.menu-sec ul li span svg {
+  margin-left: auto;
+}
 section.menu-sec ul li ul.sub-menu {
   padding: 0;
 }
 section.menu-sec ul li ul.sub-menu li a {
-  padding-left: 80px;
+  padding-left: 65px;
 }
-section.menu-sec ul li.active > a {
+section.menu-sec ul li ul.sub-menu li.active a {
+  background-color: transparent;
+  color: #fa4248;
+  padding-left: 65px;
+}
+section.menu-sec ul li ul.sub-menu li.active a::before {
+  background-color: transparent;
+}
+section.menu-sec ul li > a.active {
   background: #ffe8e8;
   color: #fa4248;
 }
-section.menu-sec ul li.active > a img {
+section.menu-sec ul li > a.active img {
   filter: invert(35%) sepia(56%) saturate(4166%) hue-rotate(337deg) brightness(105%) contrast(96%);
 }
-section.menu-sec ul li.active > a:before {
+section.menu-sec ul li > a.active:before {
+  opacity: 1;
+}
+section.menu-sec ul li > span.active {
+  background: #ffe8e8;
+  color: #fa4248;
+}
+section.menu-sec ul li > span.active img {
+  filter: invert(35%) sepia(56%) saturate(4166%) hue-rotate(337deg) brightness(105%) contrast(96%);
+}
+section.menu-sec ul li > span.active:before {
   opacity: 1;
 }
 section.menu-sec .hamburger {
@@ -382,7 +438,7 @@ section.dashboard-page .sec2 form select {
   width: 100%;
   margin-right: 24px;
   appearance: none;
-  background-image: url(../images/dashboard-img2.svg);
+  background-image: url(../../assets/images/dashboard-img2.svg);
   background-repeat: no-repeat;
   background-position: right 15px center;
 }
@@ -396,7 +452,7 @@ section.dashboard-page .sec2 form input.date-pick {
   padding: 0 15px;
   width: 100%;
   appearance: none;
-  background-image: url(../images/dashboard-img2.svg);
+  background-image: url(../../assets/images/dashboard-img2.svg);
   background-repeat: no-repeat;
   background-position: right 15px center;
 }
@@ -491,7 +547,7 @@ section.dashboard-page.dash2-sec .table-wrap table.userTable td:last-child {
 
 footer {
   border-top: 0.5px solid #e0e0e0;
-  padding: 10px 68px;
+  padding: 10px 15px;
   position: relative;
   position: fixed;
   bottom: 0;
@@ -667,7 +723,7 @@ section.partner-facilities-page .form-wrap textarea {
 }
 section.partner-facilities-page .form-wrap select {
   appearance: none;
-  background-image: url(../images/down-arrow.svg);
+  background-image: url(../../assets/images/down-arrow.svg);
   background-repeat: no-repeat;
   background-position: right 15px center;
 }
@@ -928,7 +984,7 @@ section.facilities-payement form select {
   width: 100%;
   margin-right: 24px;
   appearance: none;
-  background-image: url(../images/dashboard-img2.svg);
+  background-image: url(../../assets/images/dashboard-img2.svg);
   background-repeat: no-repeat;
   background-position: right 15px center;
 }
@@ -942,7 +998,7 @@ section.facilities-payement form input.date-pick {
   padding: 0 15px;
   width: 100%;
   appearance: none;
-  background-image: url(../images/dashboard-img2.svg);
+  background-image: url(../../assets/images/dashboard-img2.svg);
   background-repeat: no-repeat;
   background-position: right 15px center;
 }
@@ -1066,13 +1122,13 @@ section.info1 .plan-box ul li::after {
   top: -4px;
 }
 section.info1 .plan-box ul li:not(.cancel)::after {
-  background-image: url(../images/ok.png);
+  background-image: url(../../assets/images/ok.png);
 }
 section.info1 .plan-box ul li span {
   color: #fa4248;
 }
 section.info1 .plan-box ul li.cancel::after {
-  background-image: url(../images/cancel.png);
+  background-image: url(../../assets/images/cancel.png);
 }
 section.info1 .plan-box .add-on {
   margin-top: 26px;
@@ -1178,7 +1234,7 @@ section.info2 form > ul li label ul li::after {
   top: -4px;
 }
 section.info2 form > ul li label ul li:not(.cancel)::after {
-  background-image: url(../images/ok.png);
+  background-image: url(../../assets/images/ok.png);
 }
 section.info2 form > ul li label ul li span {
   color: #fa4248;
@@ -1187,7 +1243,7 @@ section.info2 form > ul li label ul li.cancel {
   color: #a0abbb;
 }
 section.info2 form > ul li label ul li.cancel::after {
-  background-image: url(../images/cancel.png);
+  background-image: url(../../assets/images/cancel.png);
 }
 section.info2 form > ul li label .add-on {
   margin-top: 50px;
@@ -1254,7 +1310,7 @@ section.info2 .form-wrap textarea {
 }
 section.info2 .form-wrap select {
   appearance: none;
-  background-image: url(../images/down-arrow.svg);
+  background-image: url(../../assets/images/down-arrow.svg);
   background-repeat: no-repeat;
   background-position: right 15px center;
 }
@@ -1458,7 +1514,7 @@ section.manage-subs .box ul li::after {
   top: -4px;
 }
 section.manage-subs .box ul li:not(.cancel)::after {
-  background-image: url(../images/ok.png);
+  background-image: url(../../assets/images/ok.png);
 }
 section.manage-subs .box ul li span {
   color: #fa4248;
@@ -1467,7 +1523,7 @@ section.manage-subs .box ul li.cancel {
   color: #191d23;
 }
 section.manage-subs .box ul li.cancel::after {
-  background-image: url(../images/cancel.png);
+  background-image: url(../../assets/images/cancel.png);
 }
 section.manage-subs .table-wrap {
   position: relative;
@@ -1617,7 +1673,7 @@ section.manage-page .form-wrap textarea {
 }
 section.manage-page .form-wrap select {
   appearance: none;
-  background-image: url(../images/down-arrow.svg);
+  background-image: url(../../assets/images/down-arrow.svg);
   background-repeat: no-repeat;
   background-position: right 15px center;
 }

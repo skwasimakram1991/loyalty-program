@@ -71,6 +71,16 @@ section.login-page {
   background-repeat: no-repeat;
   background-size: cover;
 }
+section.login-page .login-row {
+  margin-bottom: 20px;
+}
+section.login-page small.error {
+  text-align: left;
+  display: block;
+  color: #fa4248;
+  font-weight: 400;
+  font-size: 14px;
+}
 section.login-page .wrap {
   background: #ffffff;
   box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.1);
@@ -100,13 +110,12 @@ section.login-page input:not([type=submit]):not([type=checkbox]) {
   border-radius: 4px;
   width: 100%;
   padding: 15px;
-  margin: 0 0 24px;
+  margin: 0 0 8px;
 }
 section.login-page .check-box {
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
-  color: #212529;
   display: flex;
   align-items: center;
   margin: 0 0 32px;
@@ -200,7 +209,7 @@ section.menu-sec ul li span {
   text-transform: capitalize;
   color: #2c2c2c;
   padding: 15px;
-  padding-left: 30px;
+  padding-left: 33px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -225,10 +234,13 @@ section.menu-sec ul li span svg {
 section.menu-sec ul li ul.sub-menu {
   padding: 0;
 }
+section.menu-sec ul li ul.sub-menu li a {
+  padding-left: 65px;
+}
 section.menu-sec ul li ul.sub-menu li.active a {
   background-color: transparent;
   color: #fa4248;
-  padding-left: 58px;
+  padding-left: 65px;
 }
 section.menu-sec ul li ul.sub-menu li.active a::before {
   background-color: transparent;

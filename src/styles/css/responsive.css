@@ -3,9 +3,17 @@
 @media (max-width: 1770px) {
   section.menu-sec ul li a {
     padding-left: 30px;
+    padding-block: 10px;
   }
   section.menu-sec ul li ul.sub-menu li a {
-    padding-left: 58px;
+    padding-left: 65px;
+    font-size: 14px;
+    padding-block: 10px;
+  }
+  section.menu-sec ul li span {
+    padding-left: 32px;
+    font-size: 16px;
+    padding-block: 10px;
   }
 }
 @media (max-width: 1590px) {
@@ -20,7 +28,12 @@
     padding-block: 10px;
   }
   section.menu-sec ul li ul.sub-menu li a {
-    padding-left: 45px;
+    padding-left: 53px;
+    font-size: 14px;
+    padding-block: 8px;
+  }
+  section.menu-sec ul li ul.sub-menu li.active a {
+    padding-left: 53px;
   }
   section.subscriptionManagement .subscribe-cards .sub-card h4 {
     font-size: 20px;
@@ -37,12 +50,20 @@
   /* section.partner-facilities-page .form-wrap label {
     min-height: 50px;
   } */
+  section.menu-sec ul li span {
+    padding-left: 20px !important;
+
+    font-size: 14px;
+  }
 }
 @media (max-width: 1320px) {
   section.menu-sec ul li a {
-    padding-left: 18px;
+    padding-left: 12px;
     padding-block: 6px;
-    font-size: 11px;
+    font-size: 14px;
+  }
+  section.menu-sec ul li ul.sub-menu li.active a {
+    padding-left: 37px;
   }
   section.menu-sec ul li a img {
     margin-right: 8px;
@@ -119,6 +140,23 @@
   section.subscriptionManagement .subscribe-cards .sub-card {
     padding: 40px 10px;
   }
+  section.menu-sec ul li span {
+    font-size: 14px;
+    padding: 8px;
+  }
+  section.menu-sec ul li ul.sub-menu li a {
+    padding-block: 8px;
+  }
+  section.menu-sec ul li span {
+    padding-left: 12px !important;
+  }
+  section.menu-sec ul li span img {
+    margin-right: 5px;
+    width: 16px;
+  }
+  section.menu-sec ul li ul.sub-menu li a {
+    padding-left: 36px;
+  }
 }
 
 @media (max-width: 1160px) {
@@ -126,7 +164,7 @@
     margin-top: 5px;
   }
   section.menu-sec ul li a {
-    padding-left: 12px;
+    padding-left: 11px;
     padding-block: 4px;
     font-size: 10px;
   }
@@ -172,6 +210,25 @@
   section.partner-facilities-page .form-wrap label {
     min-height: 42px;
     font-size: 13px;
+  }
+  section.menu-sec ul li span {
+    font-size: 10px;
+    padding: 8px;
+  }
+  section.menu-sec ul li span img {
+    width: 15px;
+  }
+  section.menu-sec ul li span {
+    padding-left: 12px !important;
+  }
+  section.menu-sec ul li ul.sub-menu li a {
+    padding-left: 33px;
+    font-size: 10px;
+    padding-block: 5px;
+  }
+  section.menu-sec ul li ul.sub-menu li.active a {
+    padding-left: 32px;
+    font-size: 11px;
   }
 }
 
