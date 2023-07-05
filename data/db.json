@@ -1,0 +1,57 @@
+{
+  "superAdminLogin": {
+    "message": "Super Admin logged in successfully",
+    "data": {
+      "id": 4,
+      "fullname": "Super Admin",
+      "role_id": {
+        "id": 12,
+        "roleDisplayname": "Super Admin",
+        "rolegroup": "backend",
+        "status": "Active",
+        "isDeleted": 0,
+        "createdAt": "2023-06-21",
+        "updatedAt": "2023-06-21"
+      },
+      "image": "http://localhost:3000/uploads/image-1687330585856-158615138.jpg",
+      "email": "superadmin@gmail.com",
+      "password": "$2a$10$XuJljWZ3aXsKx69Yz/FWQOomrIk0W2PQQ0rbrynEBeRHXQKMyDtay",
+      "isDeleted": 0,
+      "createdAt": "2023-06-21",
+      "updatedAt": "2023-06-28",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJzdXBlcmFkbWluQGdtYWlsLmNvbSIsInJvbGVfaWQiOjEyLCJpYXQiOjE2ODg0NDg1ODIsImV4cCI6MTY4ODUzNDk4Mn0.GjDclTjx3e4dp2llc4zmNEcQXlpHPMKjqLDzf7So8f0"
+    }
+  },
+  "partnerLogin": {
+    "message": "Partner logged in successfully",
+    "data": {
+      "id": 6,
+      "sponsor_name": "Starbucks",
+      "subscription_id": 2,
+      "role_id": {
+        "id": 14,
+        "roleDisplayname": "Admin",
+        "rolegroup": "sub-backend",
+        "status": "Active",
+        "isDeleted": 0,
+        "createdAt": "2023-06-23",
+        "updatedAt": "2023-06-23"
+      },
+      "notes": "Well I am from America",
+      "image": "https://ui-avatars.com/api/?name=S&background=ffffff&color=000&size=200&format=png",
+      "qr_code": "public/Qr_code/starbuck@gmail.com.png",
+      "street_address": "504, street park, Post office: Post",
+      "state": "Dallas",
+      "city": "Texas",
+      "country": "America",
+      "phone": "4556-444-888",
+      "zip_code": "3456789",
+      "email": "starbuck@gmail.com",
+      "password": "$2a$10$DKQbrUZvnXrY0StWVFzKmuAdlkjtuXIe.biGWzAcoSFBfB4WHRfAq",
+      "isDeleted": 0,
+      "createdAt": "2023-06-29T06:44:52.000Z",
+      "updatedAt": "2023-06-29T06:46:42.000Z",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJzdGFyYnVja0BnbWFpbC5jb20iLCJyb2xlX2lkIjoxNCwiaWF0IjoxNjg4NDQ5OTI2LCJleHAiOjE2ODg1MzYzMjZ9.ImkLc_9r7VcSQUW-UyQ4iWqkCot953Xo5ZvA3Qodr8w"
+    }
+  }
+}

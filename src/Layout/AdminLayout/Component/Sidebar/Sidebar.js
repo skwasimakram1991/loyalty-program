@@ -6,13 +6,13 @@ import { useLocation, NavLink, Link } from 'react-router-dom';
 import { BsChevronRight } from 'react-icons/bs';
 import { VscChromeClose } from 'react-icons/vsc';
 import { VscMenu } from 'react-icons/vsc';
-import logo from '../../assets/images/logo.png';
-import img1 from '../../assets/images/menu-icon1.svg';
-import img2 from '../../assets/images/menu-icon2.svg';
-import img3 from '../../assets/images/menu-icon3.svg';
-import img4 from '../../assets/images/menu-icon4.svg';
-import img5 from '../../assets/images/menu-icon5.svg';
-import img6 from '../../assets/images/menu-icon6.svg';
+import logo from '../../img/logo.png';
+import img1 from '../../img/menu-icon1.svg';
+import img2 from '../../img/menu-icon2.svg';
+import img3 from '../../img/menu-icon3.svg';
+import img4 from '../../img/menu-icon4.svg';
+import img5 from '../../img/menu-icon5.svg';
+import img6 from '../../img/menu-icon6.svg';
 
 function Sidebar() {
   const [show, setShow] = useState(false);

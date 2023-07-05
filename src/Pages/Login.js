@@ -1,35 +1,28 @@
 /** @format */
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import logo from '../assets/images/logo.svg';
 import { FaEyeSlash, FaEye } from 'react-icons/fa6';
-import { useDispatch } from 'react-redux';
-
+import { useDispatch, useSelector } from 'react-redux';
 import { ErrorMessage, Field, Form, Formik, useFormik } from 'formik';
 import * as Yup from 'yup';
-// import { loginFailure, loginSuccess } from './Features/Auth/authSlice';
-import axios from 'axios';
+import { login } from '../store';
+import { getToken, getRole } from '../store/slices/authSlice';
+
 function Login() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
+
+  const { loading, error } = useSelector((state) => state.auth);
   const initialValues = {
     email: '',
     password: '',
   };
+  useEffect(() => {
+    dispatch(login());
+  }, [dispatch]);
+
   const handleSubmit = async (values, { resetForm, setSubmitting }) => {
-    // try {
-    //   const response = await axios.post('/api/login', values);
-    //   const { authenticated, user } = response.data;
-    //   if (authenticated) {
-    //     dispatch(loginSuccess(user));
-    //     console.log(values);
-    //   } else {
-    //     dispatch(loginFailure('Invalid credentials'));
-    //   }
-    // } catch (error) {
-    //   dispatch(loginFailure('An error occurred'));
-    // } finally {
-    //   resetForm();
-    // }
+    console.log(values);
   };
   const validationSchema = Yup.object().shape({
     email: Yup.string().email('Invalid email').required('Email is required'),

@@ -283,12 +283,6 @@ header {
   background: #fff;
   z-index: 9;
 }
-header.header2 {
-  width: 100%;
-}
-header.header2 a.logo img {
-  display: block !important;
-}
 header ul {
   display: flex;
   align-items: center;
@@ -344,8 +338,11 @@ section.main-page-size {
   padding: 20px 30px;
   padding-right: 68px;
   background: #f8f9fb;
-  margin-top: 90px;
+  margin-top: 80px;
   min-height: 100vh;
+}
+section.main-page-size.dash2-sec {
+  padding-top: 30px;
 }
 section.main-page-size .title-sec {
   padding: 0 0 48px;

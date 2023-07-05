@@ -317,10 +317,10 @@ header {
   background: #fff;
   z-index: 9;
   &.header2 {
-    width: 100%;
+    // width: 100%;
     a.logo {
       img {
-        display: block !important;
+        // display: block !important;
       }
     }
   }
@@ -380,8 +380,11 @@ section.main-page-size {
   padding: 20px 30px;
   padding-right: 68px;
   background: #f8f9fb;
-  margin-top: 90px;
+  margin-top: 80px;
   min-height: 100vh;
+  &.dash2-sec {
+    padding-top: 30px;
+  }
   .title-sec {
     padding: 0 0 48px;
     &.tier-title {

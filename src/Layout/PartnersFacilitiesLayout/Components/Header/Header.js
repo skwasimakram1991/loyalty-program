@@ -1,13 +1,13 @@
 /** @format */
 
 import React from 'react';
-import userimg from '../../assets/images/user-img.png';
-import Logo from '../../assets/images/logo.png';
+import userimg from '../../img/user-img.png';
+import Logo from '../../img/logo.png';
 
 function Header() {
   return (
-    <>
-      <header>
+    <div>
+      <header class='header2'>
         <div className='container-fluid'>
           <div className='row'>
             <div className='col-lg-3 col-md-3 col-4'>
@@ -15,7 +15,7 @@ function Header() {
                 <img src={Logo} alt='' />
               </a>
             </div>
-            <div className='col-lg-3 col-md-3 col-3 offset-4 offset-lg-9 offset-md-5'>
+            <div className='col-lg-3 col-md-3 col-3 ms-auto'>
               <ul>
                 <li>
                   <a href='#'>
@@ -33,7 +33,7 @@ function Header() {
           </div>
         </div>
       </header>
-    </>
+    </div>
   );
 }
 

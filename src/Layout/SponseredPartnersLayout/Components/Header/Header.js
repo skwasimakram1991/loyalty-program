@@ -1,8 +1,8 @@
 /** @format */
 
 import React from 'react';
-import userimg from '../../../assets/images/user-img.png';
-import Logo from '../../../assets/images/logo.svg';
+import userimg from '../../img/user-img.png';
+import Logo from '../../img/logo.svg';
 
 function Header() {
   return (

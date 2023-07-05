@@ -1,9 +1,9 @@
 /** @format */
 
 import React from 'react';
-import Header from '../../Component/Header/Header';
-import Sidebar from '../../Component/Sidebar/Sidebar';
-import Footer from '../../Component/Footer/Footer';
+import Header from './Components/Header/Header';
+import Sidebar from './Components/Sidebar/Sidebar';
+import Footer from './Components/Footer/Footer';
 import { Outlet } from 'react-router-dom';
 
 function SponseredPartnersLayout() {
