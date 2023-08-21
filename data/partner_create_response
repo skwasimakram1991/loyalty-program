@@ -1,0 +1,23 @@
+{
+  "message": "Partner Facility created successfully",
+  "data": {
+    "isDeleted": 0,
+    "id": 13,
+    "sponsor_name": "Main",
+    "subscription_id": 2,
+    "notes": "Well I am from America",
+    "street_address": "504, street park, Post office: Post",
+    "state": "Dallas",
+    "city": "Texas",
+    "country": "America",
+    "phone": "4556-444-000",
+    "zip_code": "3456789",
+    "email": "main@gmail.com",
+    "password": "$2a$10$ifypy9EvFJ9QkEG5V4hl4.kGsChHkPZ4/VxlbUYbPRGs4Fw1pVG2G",
+    "image": "https://ui-avatars.com/api/?name=M&background=ffffff&color=000&size=200&format=png",
+    "role_id": 14,
+    "qr_code": "public/Qr_code/main@gmail.com.png",
+    "updatedAt": "2023-07-07T04:39:20.576Z",
+    "createdAt": "2023-07-07T04:39:20.576Z"
+  }
+}

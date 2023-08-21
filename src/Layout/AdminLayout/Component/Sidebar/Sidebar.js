@@ -1,8 +1,7 @@
 /** @format */
 
 import React, { useEffect, useState } from 'react';
-import { useLocation, NavLink, Link } from 'react-router-dom';
-
+import { useLocation, NavLink, Link, useNavigate } from 'react-router-dom';
 import { BsChevronRight } from 'react-icons/bs';
 import { VscChromeClose } from 'react-icons/vsc';
 import { VscMenu } from 'react-icons/vsc';
@@ -13,12 +12,14 @@ import img3 from '../../img/menu-icon3.svg';
 import img4 from '../../img/menu-icon4.svg';
 import img5 from '../../img/menu-icon5.svg';
 import img6 from '../../img/menu-icon6.svg';
-
+import { FiLogOut } from 'react-icons/fi';
+import { logoutUser } from '../../../../store/slices/authSlice';
+import { useDispatch } from 'react-redux';
 function Sidebar() {
   const [show, setShow] = useState(false);
-  //assigning location variable
+  const navigate = useNavigate();
   const location = useLocation();
-
+  const dispatch = useDispatch();
   //destructuring pathname from location
   const { pathname } = location;
 
@@ -196,6 +197,15 @@ function Sidebar() {
           <li>
             <NavLink to='/settings'>
               <img src={img1} alt='' /> Settings
+            </NavLink>
+          </li>
+          <li
+            onClick={() => {
+              dispatch(logoutUser());
+              navigate('/login');
+            }}>
+            <NavLink>
+              <FiLogOut /> Logout
             </NavLink>
           </li>
         </ul>

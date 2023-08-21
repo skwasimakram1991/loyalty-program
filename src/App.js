@@ -7,23 +7,33 @@ import PartnersFacilitiesLayout from './Layout/PartnersFacilitiesLayout/Partners
 import SponseredPartnersLayout from './Layout/SponseredPartnersLayout/SponseredPartnersLayout';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Login from './Pages/Login';
+import PartnersLogin from './Pages/Partners-Dashboard/Login';
 import ErrorPage from './Pages/ErrorPage';
 import { Navigate } from 'react-router-dom/dist';
 import Settings from './Pages/Settings';
 import SponseredPayement from './Pages/SponseredPayement';
 import PartnerFacilities from './Pages/PartneerFacilities/PartnerFacilities';
 import AddPartner from './Pages/PartneerFacilities/AddPartner';
+import EditPartner from './Pages/PartneerFacilities/EditPartner';
 import SubscriptionMangement from './Pages/PartneerFacilities/SubscriptionMangement';
 import RewardsCategories from './Pages/PartneerFacilities/RewardsCategories';
 import AddReward from './Pages/PartneerFacilities/AddReward';
 import RouteProtection from './Component/Auth/RouteProtection';
+import PartnerRouteProtection from './Component/Auth/PartnerRouteProtection';
 import PartnerDashboard from './Pages/Partners-Dashboard/Dashboard';
+import ManageSubscription from './Pages/Partners-Dashboard/ManageSubscription';
+import AccountSetting from './Pages/Partners-Dashboard/AccountSetting';
+import ManagePayement from './Pages/Partners-Dashboard/ManagePay';
+import PayementMethod from './Pages/Partners-Dashboard/PayementMethod';
+import BasicInfo from './Pages/Partners-Dashboard/BasicInfo';
+// import ManageSubscription from './Pages/Partners-Dashboard/ManageSubscription';
 import SponserDashboard from './Pages/Sponser-Dashboard/Dashboard';
+import CreateSubscription from './Pages/PartneerFacilities/CreateSubscription';
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <RouteProtection role={'super-admin'} />,
+      element: <RouteProtection role={'backend'} redirectTo='/login' />,
       children: [
         {
           path: '/',
@@ -69,8 +79,16 @@ function App() {
                   element: <AddPartner />,
                 },
                 {
+                  path: 'editpartner/:id',
+                  element: <EditPartner />,
+                },
+                {
                   path: 'subscription',
                   element: <SubscriptionMangement />,
+                },
+                {
+                  path: 'subscription-create',
+                  element: <CreateSubscription />,
                 },
               ],
             },
@@ -134,21 +152,39 @@ function App() {
       ],
     },
     {
-      path: '/',
-      element: <RouteProtection role={'admin'} />,
+      path: '/partner-dashboard',
+      element: (
+        <RouteProtection role={'sub-backend'} redirectTo='/partner/login' />
+      ),
       children: [
         {
-          path: '/',
+          path: '',
           element: <PartnersFacilitiesLayout />,
           errorElement: <ErrorPage />,
           children: [
             {
-              path: '/',
-              element: <Navigate to='/admin-dashboard' replace />,
+              path: '',
+              element: <PartnerDashboard />,
             },
             {
-              path: '/admin-dashboard',
-              element: <PartnerDashboard />,
+              path: 'manage-sub',
+              element: <ManageSubscription />,
+            },
+            {
+              path: 'account-setting',
+              element: <AccountSetting />,
+            },
+            {
+              path: 'ManagePay',
+              element: <ManagePayement />,
+            },
+            {
+              path: 'basicInfo',
+              element: <BasicInfo />,
+            },
+            {
+              path: 'payement',
+              element: <PayementMethod />,
             },
           ],
         },
@@ -156,20 +192,22 @@ function App() {
     },
     {
       path: '/',
-      element: <RouteProtection role={'sponser'} />,
+      element: (
+        <RouteProtection role={['sponser']} redirectTo='/sponser/login' />
+      ),
       children: [
         {
-          path: '/',
+          path: '/sponser',
           element: <SponseredPartnersLayout />,
           errorElement: <ErrorPage />,
           children: [
             {
-              path: '/',
-              element: <Navigate to='/sponser-dashboard' replace />,
+              path: '/sponser',
+              element: <Navigate to='dashboard' replace />,
             },
             {
-              path: '/sponser-dashboard',
-              element: <SponserDashboard />,
+              path: 'dashboard',
+              element: <PartnersLogin />,
             },
           ],
         },
@@ -179,6 +217,10 @@ function App() {
     {
       path: '/login',
       element: <Login />,
+    },
+    {
+      path: '/partner/login',
+      element: <PartnersLogin />,
     },
   ]);
   return (

@@ -1,242 +1,109 @@
 /** @format */
 
-// import logo from "./logo.svg";
-// import "./App.css";
+import partnerimg1 from '../../assets/images/partner-img1.png';
+import partnerimg2 from '../../assets/images/partner-img2.png';
+import partnerimg3 from '../../assets/images/partner-img3.png';
+import partnerimg4 from '../../assets/images/partner-img4.png';
+import partnerimg5 from '../../assets/images/partner-img5.png';
+import partnerimg6 from '../../assets/images/partner-img6.png';
 
-import React from 'react';
+import React, { useState } from 'react';
 
-import partnerimg1 from './img/partner-img1.png';
-import partnerimg2 from './img/partner-img2.png';
-import partnerimg3 from './img/partner-img3.png';
-import partnerimg4 from './img/partner-img4.png';
-import partnerimg5 from './img/partner-img5.png';
-import partnerimg6 from './img/partner-img6.png';
-import qrcodeimg from './img/qr-code.svg';
-import downloadimg from './img/download.svg';
-import editimg from './img/edit-icon.svg';
-
-import { BsChevronLeft } from 'react-icons/bs';
-import { BsChevronRight } from 'react-icons/bs';
+import Layout from '../../Component/SectionLayout/Layout';
 import TableWrapper from '../../Component/TableWrapper/TableWrapper';
+import Table from '../../Component/Table/Table';
+import { useFetchPartnersDataQuery } from '../../store/api/partnersApi';
+import SuccessModal from '../../Component/notify/SuccessModal';
+import Pagination from '../../Component/Pagination/Pagination';
+import { useSelector } from 'react-redux';
 function PartnerFacilities() {
-  return (
-    <section className='partner-facilities-page main-page-size'>
-      <div className='container-fluid'>
-        <div className='row align-items-center title-sec'>
-          <div className='col-lg-6'>
-            <h2>Partner Facilities</h2>
-          </div>
-          <div className='col-lg-6 text-end'>
-            <a href='/partner/add' className='title-btn'>
-              Add Partner
-            </a>
-          </div>
-        </div>
-        <div className='row'>
-          <div className='col-lg-12'>
-            <TableWrapper>
-              <tr>
-                <th>partner name</th>
-                <th>Email address</th>
-                <th>Phone no</th>
-                <th>QR Code</th>
-                <th>Download QR</th>
-                <th>Edit</th>
-              </tr>
-              <tr>
-                <td>
-                  <img src={partnerimg1} alt='' />
-                  McDonald's
-                </td>
-                <td>nathan.roberts@example.com</td>
-                <td>(907) 555-0101</td>
-                <td>
-                  <a href='#' className='qr-img'>
-                    <img src={qrcodeimg} alt='' />
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='down-img'>
-                    <img src={downloadimg} alt='' />
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='edit-img'>
-                    <img src={editimg} alt='' />
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src={partnerimg2} alt='' />
-                  Gillette
-                </td>
-                <td>michelle.rivera@example.com</td>
-                <td>(208) 555-0112</td>
-                <td>
-                  <a href='#' className='qr-img'>
-                    <img src={qrcodeimg} alt='' />
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='down-img'>
-                    <img src={downloadimg} alt='' />
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='edit-img'>
-                    <img src={editimg} alt='' />
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src={partnerimg1} alt='' />
-                  McDonald's
-                </td>
-                <td>tim.jennings@example.com</td>
-                <td>(308) 555-0121</td>
-                <td>
-                  <a href='#' className='qr-img'>
-                    <img src={qrcodeimg} alt='' />
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='down-img'>
-                    <img src={downloadimg} alt='' />
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='edit-img'>
-                    <img src={editimg} alt='' />
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src={partnerimg3} alt='' />
-                  Starbucks
-                </td>
-                <td>dolores.chambers@example.com</td>
-                <td>(303) 555-0105</td>
-                <td>
-                  <a href='#' className='qr-img'>
-                    <img src={qrcodeimg} alt='' />
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='down-img'>
-                    <img src={downloadimg} alt='' />
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='edit-img'>
-                    <img src={editimg} alt='' />
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src={partnerimg4} alt='' />
-                  Mitsubishi
-                </td>
-                <td>jessica.hanson@example.com</td>
-                <td>(480) 555-0103</td>
-                <td>
-                  <a href='#' className='qr-img'>
-                    <img src={qrcodeimg} alt='' />
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='down-img'>
-                    <img src={downloadimg} alt='' />
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='edit-img'>
-                    <img src={editimg} alt='' />
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src={partnerimg5} alt='' />
-                  MasterCard
-                </td>
-                <td>sara.cruz@example.com</td>
-                <td>(603) 555-0123</td>
-                <td>
-                  <a href='#' className='qr-img'>
-                    <img src={qrcodeimg} alt='' />
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='down-img'>
-                    <img src={downloadimg} alt='' />
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='edit-img'>
-                    <img src={editimg} alt='' />
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src={partnerimg6} alt='' />
-                  Louis Vuitton
-                </td>
-                <td>debbie.baker@example.com</td>
-                <td>(209) 555-0104</td>
-                <td>
-                  <a href='#' className='qr-img'>
-                    <img src={qrcodeimg} alt='' />
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='down-img'>
-                    <img src={downloadimg} alt='' />
-                  </a>
-                </td>
-                <td>
-                  <a href='#' className='edit-img'>
-                    <img src={editimg} alt='' />
-                  </a>
-                </td>
-              </tr>
-            </TableWrapper>
+  const currPage = useSelector((state) => state.partner.currPage);
+  const { data, isLoading, isFetching, error, refetch } =
+    useFetchPartnersDataQuery(currPage);
 
-            <ul className='page-nation'>
-              <li>
-                <a href='#'>
-                  <BsChevronLeft />
-                </a>
-              </li>
-              <li className='active'>
-                <a href='#'>1</a>
-              </li>
-              <li>
-                <a href='#'>2</a>
-              </li>
-              <li>
-                <a href='#'>3</a>
-              </li>
-              <li>
-                <a href='#'>4</a>
-              </li>
-              <li>
-                <a href='#'>5</a>
-              </li>
-              <li>
-                <a href='#'>
-                  <BsChevronRight />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+  console.log(useFetchPartnersDataQuery(currPage));
+  const tableHeadData = [
+    { id: 1, title: 'partner name' },
+    { id: 2, title: 'Email address' },
+    { id: 3, title: 'Phone no' },
+    { id: 4, title: 'subscription' },
+    { id: 5, title: 'QR Code' },
+    { id: 6, title: 'Download QR' },
+    { id: 7, title: 'Edit' },
+  ];
+  const tableBodyData = [
+    {
+      id: 1,
+      title: 'Adidas',
+      email: 'Info@adidas.com',
+      phone: '(907) 555-0101',
+      subscription: 'Business Plus',
+    },
+    {
+      id: 2,
+      title: 'Gillette',
+      email: 'Info@adidas.com',
+      phone: '(907) 555-0101',
+      subscription: 'Business Plus',
+    },
+    {
+      id: 3,
+      title: 'McDonalds',
+      email: 'Info@adidas.com',
+      phone: '(907) 555-0101',
+      subscription: 'Business Plus',
+    },
+    {
+      id: 4,
+      title: 'Starbucks',
+      email: 'Info@adidas.com',
+      phone: '(907) 555-0101',
+      subscription: 'Business Plus',
+    },
+    {
+      id: 5,
+      title: 'Mitsubishi',
+      email: 'Info@adidas.com',
+      phone: '(907) 555-0101',
+      subscription: 'Business Plus',
+    },
+    {
+      id: 6,
+      title: 'MasterCard',
+      email: 'Info@adidas.com',
+      phone: '(907) 555-0101',
+      subscription: 'Business Plus',
+    },
+    {
+      id: 7,
+      title: 'Louis Vuitton',
+      email: 'Info@adidas.com',
+      phone: '(907) 555-0101',
+      subscription: 'Business Plus',
+    },
+  ];
+
+  return (
+    <>
+      {isLoading && <SuccessModal title={'Loading'} loader={false} />}
+      <Layout
+        sectionTitle='Partner Facilities'
+        partnerLink='/partner/addpartner'>
+        {data?.data && (
+          <>
+            <TableWrapper>
+              <Table tableHead={tableHeadData} TableData={data?.data}></Table>
+            </TableWrapper>
+            <Pagination
+              totalPage={data?.totalPages}
+              currentPage={data?.currentPage}
+            />
+            {isFetching && <SuccessModal title={'Updating'} loader={false} />}
+          </>
+        )}
+      </Layout>
+      {error && <h2>error</h2>}
+    </>
   );
 }
 

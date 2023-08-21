@@ -1,89 +1,107 @@
 /** @format */
 import React, { useEffect } from 'react';
-
+import { useForm } from 'react-hook-form';
 import logo from '../assets/images/logo.svg';
-import { FaEyeSlash, FaEye } from 'react-icons/fa6';
 import { useDispatch, useSelector } from 'react-redux';
-import { ErrorMessage, Field, Form, Formik, useFormik } from 'formik';
-import * as Yup from 'yup';
-import { login } from '../store';
-import { getToken, getRole } from '../store/slices/authSlice';
+import { userLogin } from '../store';
+import { useNavigate } from 'react-router-dom';
+import SuccessModal from '../Component/notify/SuccessModal';
 
 function Login() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const path = window.location.pathname;
+  console.log(path);
+  const { loading, error, adminToken, role } = useSelector(
+    (state) => state.auth,
+  );
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  const { loading, error } = useSelector((state) => state.auth);
-  const initialValues = {
-    email: '',
-    password: '',
+  const onSubmit = async (data) => {
+    const newData = {
+      data,
+      role: 'admin',
+    };
+    dispatch(userLogin(newData))
+      .unwrap()
+      .then(() => {
+        navigate('/'); // Navigate to the desired route after successful login
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    console.log(data);
   };
+
   useEffect(() => {
-    dispatch(login());
-  }, [dispatch]);
-
-  const handleSubmit = async (values, { resetForm, setSubmitting }) => {
-    console.log(values);
-  };
-  const validationSchema = Yup.object().shape({
-    email: Yup.string().email('Invalid email').required('Email is required'),
-    password: Yup.string()
-      .min(5, 'Password must be at least 5 characters')
-      .max(20, 'Password must be less than 20 characters')
-      .required('Password is required'),
-  });
+    if (
+      adminToken &&
+      role === 'backend' &&
+      (path === '/login' || path === '/partner/login')
+    )
+      navigate('/');
+  }, [adminToken, role, path]);
 
   return (
-    <div>
+    <>
       <section className='login-page'>
         <div className='wrap'>
           <img src={logo} alt='' />
-          <h2>Login</h2>
-          <Formik
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-            onSubmit={handleSubmit}>
-            <Form>
-              <div className='login-row'>
-                <label htmlFor=''>Email</label>
-                <Field
-                  type='email'
-                  placeholder='Enter your user name or email here'
-                  id='email'
-                  name='email'
-                  autoComplete='true'
-                />
-                <ErrorMessage
-                  name='email'
-                  component='small'
-                  className='error'
-                />
-              </div>
-              <div className='login-row'>
-                <label htmlFor=''>
-                  Password <span>*</span>
-                </label>
-                <Field
-                  type='password'
-                  id='password'
-                  name='password'
-                  placeholder='**********'
-                  autoComplete='true'
-                />
-                <ErrorMessage
-                  name='password'
-                  component='small'
-                  className='error'
-                />
-              </div>
-              <div className='check-box'>
-                <input type='checkbox' name='' id='' /> Remember me
-              </div>
-              <input type='submit' value='Login' />
-            </Form>
-          </Formik>
+          <h2> Login</h2>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className='login-row'>
+              <label htmlFor=''>Email</label>
+              <input
+                type='email'
+                placeholder='Enter your user name or email here'
+                autoComplete='true'
+                {...register('email', {
+                  required: 'Email is required',
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: 'Invalid email address',
+                  },
+                })}
+              />
+              {errors.email && (
+                <small class='error'>{errors.email.message}</small>
+              )}
+            </div>
+            <div className='login-row'>
+              <label htmlFor=''>
+                Password <span>*</span>
+              </label>
+              <input
+                type='password'
+                name='password'
+                placeholder='**********'
+                autoComplete='true'
+                {...register('password', {
+                  required: 'Password is required',
+                  minLength: {
+                    value: 8,
+                    message: 'Password must be at least 8 characters',
+                  },
+                })}
+              />
+              {errors.password && (
+                <small class='error'>{errors.password.message}</small>
+              )}
+            </div>
+            <div className='check-box'>
+              <input type='checkbox' name='' id='' /> Remember me
+            </div>
+            <input type='submit' value='Login' />
+          </form>
         </div>
       </section>
-    </div>
+      {loading && <SuccessModal title={'please wait ...'} />}
+      {error && <SuccessModal title={error} />}
+    </>
   );
 }
 

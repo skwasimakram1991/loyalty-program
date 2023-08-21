@@ -5,9 +5,7 @@ import React from 'react';
 function TableWrapper({ children }) {
   return (
     <>
-      <div className='table-wrap table-responsive'>
-        <table className='table'>{children}</table>
-      </div>
+      <div className='table-wrap table-responsive'>{children}</div>
     </>
   );
 }

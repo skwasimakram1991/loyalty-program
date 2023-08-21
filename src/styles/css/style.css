@@ -35,7 +35,12 @@ select:focus {
   text-transform: capitalize;
   color: #ffffff;
   padding: 13px 50px;
+  cursor: pointer;
   margin: 15px 0 0;
+}
+
+button {
+  cursor: pointer;
 }
 
 a,
@@ -64,6 +69,7 @@ button:focus {
 section.login-page {
   width: 100%;
   height: 100vh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,7 +80,7 @@ section.login-page {
 section.login-page .login-row {
   margin-bottom: 20px;
 }
-section.login-page small.error {
+section.login-page .login-row small.error {
   text-align: left;
   display: block;
   color: #fa4248;
@@ -95,6 +101,7 @@ section.login-page h2 {
   line-height: 38px;
   color: #2c2c2c;
   text-align: center;
+  text-transform: capitalize;
   margin: 44px 0;
 }
 section.login-page label {
@@ -173,8 +180,12 @@ section.menu-sec ul li a {
   padding: 15px;
   padding-left: 30px;
   width: 100%;
-  display: table;
+  display: flex;
   position: relative;
+}
+section.menu-sec ul li a svg {
+  margin-right: 10px;
+  font-size: 22px;
 }
 section.menu-sec ul li a:before {
   content: "";
@@ -283,6 +294,12 @@ header {
   background: #fff;
   z-index: 9;
 }
+header.header2 {
+  width: 100%;
+}
+header.header2 a.logo img {
+  display: block;
+}
 header ul {
   display: flex;
   align-items: center;
@@ -296,11 +313,11 @@ header ul li .img-sec {
 }
 header ul li .img-sec span {
   display: table;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   position: absolute;
-  bottom: 8px;
+  bottom: 4px;
   right: 0;
 }
 header ul li .img-sec span.color1 {
@@ -338,8 +355,9 @@ section.main-page-size {
   padding: 20px 30px;
   padding-right: 68px;
   background: #f8f9fb;
-  margin-top: 80px;
+  margin-top: 90px;
   min-height: 100vh;
+  padding-bottom: 110px;
 }
 section.main-page-size.dash2-sec {
   padding-top: 30px;
@@ -598,6 +616,7 @@ section.partner-facilities-page .table-wrap table td {
   background: #ffffff;
   border-bottom: 1px solid #efefef;
   padding: 10px 30px;
+  vertical-align: middle;
 }
 section.partner-facilities-page .table-wrap table td.paid {
   color: #01955c;
@@ -625,12 +644,24 @@ section.partner-facilities-page .table-wrap table td span {
 }
 section.partner-facilities-page .table-wrap table td img {
   margin-right: 10px;
+  width: 33px;
 }
 section.partner-facilities-page .table-wrap table td a.qr-img img,
 section.partner-facilities-page .table-wrap table td a.down-img img,
 section.partner-facilities-page .table-wrap table td a.edit-img img {
   max-width: 35px;
   margin: 0;
+}
+section.partner-facilities-page .table-wrap table td .down-img {
+  border: none;
+}
+section.partner-facilities-page .table-wrap table td .down-img img {
+  margin: 0;
+}
+section.partner-facilities-page .table-wrap table td.prof img {
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
 }
 section.partner-facilities-page .table-wrap table.userTable td:last-child {
   color: #01955c;
@@ -643,15 +674,20 @@ ul.page-nation {
   margin: 25px 0 0;
   justify-content: flex-end;
 }
-ul.page-nation li a {
+ul.page-nation li button {
   padding: 12px;
   font-weight: 300;
   font-size: 18px;
   line-height: 14px;
   color: #2c2c2c;
   display: flex;
+  background-color: transparent;
+  border: none;
 }
-ul.page-nation li.active a {
+ul.page-nation li button:hover {
+  color: #fa4248;
+}
+ul.page-nation li.active button {
   color: #fa4248;
 }
 
@@ -828,7 +864,7 @@ section.partner-facilities-page .form-wrap .file-box button {
   padding: 5px 24px;
   font-size: 10px;
 }
-section.partner-facilities-page .form-wrap input[type=submit] {
+section.partner-facilities-page .form-wrap button[type=submit] {
   background: #fa4248;
   border-radius: 4px;
   border: none;
@@ -893,6 +929,21 @@ section.subscriptionManagement .subscribe-cards {
   grid-template-columns: repeat(3, 1fr);
   row-gap: 24px;
 }
+section.subscriptionManagement .subscribe-cards .sub-col.pro .sub-card {
+  background: #ffffff;
+}
+section.subscriptionManagement .subscribe-cards .sub-col .sub-card:last-child {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+section.subscriptionManagement .subscribe-cards .sub-col .sub-card:last-child h6 {
+  color: var(--neutral-800, #191d23);
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 section.subscriptionManagement .subscribe-cards .sub-card {
   background: #eeeeee;
   padding: 40px 20px;
@@ -948,15 +999,13 @@ section.subscriptionManagement .subscribe-cards .sub-card ul li {
 section.subscriptionManagement .subscribe-cards .sub-card ul li:last-child {
   margin-bottom: 0;
 }
-section.subscriptionManagement .subscribe-cards .sub-card.pro {
-  background: #ffffff;
-}
 section.subscriptionManagement ul.btns {
   display: flex;
   align-items: center;
   gap: 24px;
   margin-top: 32px;
   margin-bottom: 58px;
+  grid-column: 1/-1;
 }
 section.subscriptionManagement ul.btns li button {
   padding: 12px 24px;
@@ -1813,6 +1862,240 @@ section.manage-page .form-wrap.head-form.user-form input:not([type=submit]) {
   border: 1px solid rgba(169, 167, 167, 0.5);
   border-radius: 4px;
   background-color: transparent;
+}
+
+.loyalty-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1882352941);
+  display: grid;
+  place-content: center;
+  z-index: 9;
+}
+.loyalty-modal-overlay .loyalty-modal {
+  background: #fff;
+  max-width: 600px;
+  width: 100%;
+  padding: 24px;
+}
+.loyalty-modal-overlay .loyalty-modal .modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.loyalty-modal-overlay .loyalty-modal .modal-head h3 {
+  margin-bottom: 20px;
+}
+.loyalty-modal-overlay .loyalty-modal .modal-head button.close {
+  font-size: 40px;
+  border: none;
+  background: transparent;
+  line-height: 22px;
+}
+.loyalty-modal-overlay .loyalty-modal .modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  max-width: 90%;
+}
+.loyalty-modal-overlay .loyalty-modal .modal-body h5 {
+  color: var(--gray-gray-9, #212529);
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155%;
+  text-transform: capitalize;
+}
+.loyalty-modal-overlay .loyalty-modal .modal-body p {
+  color: var(--gray, #5c5b60);
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 200% */
+}
+.loyalty-modal-overlay .loyalty-modal .modal-body .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.loyalty-modal-overlay .loyalty-modal .modal-body .box label {
+  color: var(--gray-gray-9, #212529);
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155%;
+  text-transform: capitalize;
+  display: inline-flex;
+  gap: 6px;
+}
+.loyalty-modal-overlay .loyalty-modal .modal-body .box label input[type=radio] {
+  width: 16px;
+  height: 16px;
+  accent-color: black;
+}
+.loyalty-modal-overlay .loyalty-modal .modal-body form .boxf label {
+  color: var(--gray-gray-9, #212529);
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155%; /* 18.6px */
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+.loyalty-modal-overlay .loyalty-modal .modal-body form .boxf input:not([type=submit]) {
+  border-radius: 4.841px;
+  border: 1.21px solid rgba(169, 167, 167, 0.5);
+  height: 42px;
+  padding: 7.262px 0px;
+  width: 100%;
+  padding: 0px 12px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 155%;
+  color: var(--gray-gray-5, #000000);
+}
+.loyalty-modal-overlay .loyalty-modal .modal-body form .boxf input:not([type=submit])::placeholder {
+  color: var(--gray-gray-5, #adb5bd);
+}
+.loyalty-modal-overlay .loyalty-modal .modal-body form input[type=submit] {
+  margin-top: 32px;
+}
+
+section.none {
+  min-height: 300px;
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+section.none h4 {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.success-modal {
+  position: absolute;
+  top: 30px;
+  transform: translateX(-50%);
+  left: 50%;
+  max-width: 400px;
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+  animation-name: slideDown;
+  -webkit-animation-name: slideDown;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+}
+.success-modal h3 {
+  font-size: 18px;
+  margin: 0 !important;
+  text-transform: capitalize;
+}
+
+.loyalty-loader {
+  min-height: 50px;
+  max-width: 50px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  gap: 6px;
+  transform: rotate(-44.8deg) translateY(-3px) translateX(-5px) scale(0.8);
+}
+.loyalty-loader .dot2 {
+  height: 30px;
+  width: 8px;
+  border-radius: 18px !important;
+  opacity: 0;
+  animation: logo-animate 1600ms ease-in-out infinite 1600ms;
+}
+.loyalty-loader .dot1 {
+  height: 12px;
+  width: 9px;
+  opacity: 0;
+  animation: logo-animate 800ms ease-in-out infinite;
+}
+.loyalty-loader .dot3 {
+  height: 50px;
+  width: 8px;
+  border-radius: 52px !important;
+  opacity: 0;
+  animation: logo-animate 2800ms ease-in-out infinite 2800ms;
+}
+.loyalty-loader .dot {
+  background: #000;
+  border-radius: 50%;
+}
+
+@keyframes logo-animate {
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateX(-50%) translateY(-100%);
+  }
+  50% {
+    transform: translateX(-50%) translateY(8%);
+  }
+  65% {
+    transform: translateX(-50%) translateY(-4%);
+  }
+  80% {
+    transform: translateX(-50%) translateY(4%);
+  }
+  95% {
+    transform: translateX(-50%) translateY(-2%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0%);
+  }
+}
+.css-1u9des2-indicatorSeparator {
+  display: none;
+}
+
+.css-13cymwt-control {
+  min-height: 45px;
+  height: 45px;
+}
+
+.css-1fdsijx-ValueContainer {
+  height: 45px;
+}
+
+.css-qbdosj-Input {
+  height: 37px;
+}
+
+section.dash-layout {
+  background-color: #f8f9fb;
 }
 
 /*# sourceMappingURL=style.css.map */

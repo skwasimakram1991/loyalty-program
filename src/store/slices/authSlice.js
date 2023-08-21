@@ -1,36 +1,73 @@
 /** @format */
-
 import { createSlice } from '@reduxjs/toolkit';
-import { login } from '../thunks/authThunks';
-import { useSelector } from 'react-redux';
+import { userLogin, userLogout } from '../thunks/authThunks';
+const adminToken = localStorage.getItem('adminToken')
+  ? localStorage.getItem('adminToken')
+  : null;
+const role = localStorage.getItem('role') ? localStorage.getItem('role') : null;
 
+const userInfo = localStorage.getItem('user')
+  ? JSON.parse(localStorage.getItem('user'))
+  : {};
+const partnerInfo = localStorage.getItem('partnerInfo')
+  ? JSON.parse(localStorage.getItem('partnerInfo'))
+  : {};
 const initialState = {
-  data: {},
   loading: false,
+  userInfo,
+  partnerInfo,
+  adminToken,
   error: null,
+  role,
+  success: false,
 };
-
-const authSlice = createSlice({
+export const authSlice = createSlice({
   name: 'auth',
   initialState,
-  reducers: {},
-  extraReducers(builder) {
-    builder.addCase(login.pending, (state) => {
-      state.loading = true;
-    });
-    builder.addCase(login.fulfilled, (state, { payload }) => {
+  reducers: {
+    logoutUser: (state) => {
       state.loading = false;
-      state.data = payload.data;
-    });
-    builder.addCase(login.rejected, (state, action) => {
-      state.loading = false;
-      state.error = action.error;
-    });
+      state.success = false;
+      state.userInfo = {};
+      state.adminToken = null;
+      state.error = null;
+      state.role = null;
+      localStorage.removeItem('adminToken');
+      localStorage.removeItem('role');
+      localStorage.removeItem('user');
+    },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(userLogin.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+        state.success = false;
+      })
+      .addCase(userLogin.fulfilled, (state, { payload }) => {
+        state.loading = false;
+        state.success = true;
+        state.userInfo = payload.data;
+        state.adminToken = payload.data.token;
+        state.role = payload.data.role_id.rolegroup;
+      })
+      .addCase(userLogin.rejected, (state, { payload }) => {
+        state.loading = false;
+        state.error = payload;
+      })
+      .addCase(userLogout, (state) => {
+        state.loading = false;
+        state.success = false;
+        state.userInfo = {};
+        state.adminToken = null;
+        state.error = null;
+        state.role = null;
+
+        localStorage.removeItem('adminToken');
+        localStorage.removeItem('role');
+        localStorage.removeItem('user');
+      });
   },
 });
 
-export const authReducer = authSlice.reducer;
-
-export const getToken = (state) => state.auth.data.token;
-// export const getRole = (state) => state.auth.data.role_id.rolegroup;
-// console.log(getToken);
+export const { logoutUser } = authSlice.actions;

@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useEffect, useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 import { BsChevronRight } from 'react-icons/bs';
 import { VscChromeClose } from 'react-icons/vsc';
@@ -13,17 +13,21 @@ import img3 from '../../img/menu-icon3.svg';
 import img4 from '../../img/menu-icon4.svg';
 import img5 from '../../img/menu-icon5.svg';
 import img6 from '../../img/menu-icon6.svg';
+import { logoutUser } from '../../../../store/slices/authSlice';
+import { useDispatch } from 'react-redux';
 
 function Sidebar() {
   const [show, setShow] = useState(false);
-  //assigning location variable
+  const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch();
+  //assigning location variable
 
   //destructuring pathname from location
-  const { pathname } = location;
+  // const { pathname } = location;
 
   //Javascript split method to get the name of the path in array
-  const splitLocation = pathname.split('/');
+  // const splitLocation = pathname.split('/');
 
   useEffect(() => {
     function handleResize() {
@@ -44,33 +48,37 @@ function Sidebar() {
         </a>
         <ul>
           <li>
-            <a href='/admin-dashboard'>
+            <NavLink to='/partner-dashboard'>
               <img src={img1} alt='' /> Dashboard
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href='/manage-sub'>
+            <NavLink to='/partner-dashboard/manage-sub'>
               <img src={img2} alt='' />
               Manage Subscription
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href='/account-setting'>
+            <NavLink to='/partner-dashboard/account-setting'>
               <img src={img3} alt='' />
               Account Settings
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href='/ManagePay'>
+            <NavLink to='/partner-dashboard/ManagePay'>
               <img src={img4} alt='' />
               manage payment
-            </a>
+            </NavLink>
           </li>
-          <li className={'logout'}>
-            <a href='/ManagePay2'>
+          <li
+            className={'logout'}
+            onClick={() => {
+              dispatch(logoutUser());
+            }}>
+            <NavLink to={'/partner/login'}>
               <img src={img5} alt='' />
               Logout
-            </a>
+            </NavLink>
           </li>
         </ul>
         <div

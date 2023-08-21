@@ -53,5 +53,169 @@
       "updatedAt": "2023-06-29T06:46:42.000Z",
       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJzdGFyYnVja0BnbWFpbC5jb20iLCJyb2xlX2lkIjoxNCwiaWF0IjoxNjg4NDQ5OTI2LCJleHAiOjE2ODg1MzYzMjZ9.ImkLc_9r7VcSQUW-UyQ4iWqkCot953Xo5ZvA3Qodr8w"
     }
+  },
+  "createPartner": {
+    "message": "Partner Facility created successfully",
+    "data": {
+      "isDeleted": 0,
+      "id": 13,
+      "sponsor_name": "Main",
+      "subscription_id": 2,
+      "notes": "Well I am from America",
+      "street_address": "504, street park, Post office: Post",
+      "state": "Dallas",
+      "city": "Texas",
+      "country": "America",
+      "phone": "4556-444-000",
+      "zip_code": "3456789",
+      "email": "main@gmail.com",
+      "password": "$2a$10$ifypy9EvFJ9QkEG5V4hl4.kGsChHkPZ4/VxlbUYbPRGs4Fw1pVG2G",
+      "image": "https://ui-avatars.com/api/?name=M&background=ffffff&color=000&size=200&format=png",
+      "role_id": 14,
+      "qr_code": "public/Qr_code/main@gmail.com.png",
+      "updatedAt": "2023-07-07T04:39:20.576Z",
+      "createdAt": "2023-07-07T04:39:20.576Z"
+    }
+  },
+  "partnerDetails": {
+    "message": "Partner details retrieved successfully",
+    "data": {
+      "id": 6,
+      "sponsor_name": "Starbucks",
+      "subscription_id": [
+        {
+          "id": 2,
+          "plan_name": "Business Pro",
+          "bill_frequency": "month",
+          "price_per_user": 79,
+          "feature_ids": [
+            "Listing as a reward partner",
+            "Customer redemption / click insights",
+            "Up to 200 redemption/footfall",
+            "1 banner ads for 7 days"
+          ],
+          "isDeleted": 0,
+          "createdAt": "2023-06-22T07:15:49.000Z",
+          "updatedAt": "2023-06-30T10:45:17.000Z"
+        }
+      ],
+      "role_id": [
+        {
+          "id": 14,
+          "roleDisplayname": "Admin",
+          "rolegroup": "sub-backend",
+          "status": "Active",
+          "isDeleted": 0,
+          "createdAt": "2023-06-23",
+          "updatedAt": "2023-06-23"
+        }
+      ],
+      "notes": "Well I am from America",
+      "image": "https://ui-avatars.com/api/?name=S&background=ffffff&color=000&size=200&format=png",
+      "qr_code": "public/Qr_code/starbuck@gmail.com.png",
+      "street_address": "504, street park, Post office: Post",
+      "state": "Dallas",
+      "city": "Texas",
+      "country": "America",
+      "phone": "4556-444-888",
+      "zip_code": "3456789",
+      "email": "starbuck@gmail.com",
+      "password": "$2a$10$DKQbrUZvnXrY0StWVFzKmuAdlkjtuXIe.biGWzAcoSFBfB4WHRfAq",
+      "isDeleted": 0,
+      "createdAt": "2023-06-29T06:44:52.000Z",
+      "updatedAt": "2023-07-06T10:22:03.000Z"
+    }
+  },
+  "PartnerList": {
+    "message": "Partner Facility List has been fetched successfully",
+    "data": [
+      {
+        "id": 6,
+        "sponsor_name": "Starbucks",
+        "subscription_id": {
+          "id": 2,
+          "plan_name": "Business Pro",
+          "bill_frequency": "month",
+          "price_per_user": 79,
+          "feature_ids": [
+            "Listing as a reward partner",
+            "Customer redemption / click insights",
+            "Up to 200 redemption/footfall",
+            "1 banner ads for 7 days"
+          ],
+          "isDeleted": 0,
+          "createdAt": "2023-06-22T07:15:49.000Z",
+          "updatedAt": "2023-06-30T10:45:17.000Z"
+        },
+        "role_id": {
+          "id": 14,
+          "roleDisplayname": "Admin",
+          "rolegroup": "sub-backend",
+          "status": "Active",
+          "isDeleted": 0,
+          "createdAt": "2023-06-23",
+          "updatedAt": "2023-06-23"
+        },
+        "notes": "Well I am from America",
+        "image": "https://ui-avatars.com/api/?name=S&background=ffffff&color=000&size=200&format=png",
+        "qr_code": "public/Qr_code/starbuck@gmail.com.png",
+        "street_address": "504, street park, Post office: Post",
+        "state": "Dallas",
+        "city": "Texas",
+        "country": "America",
+        "phone": "4556-444-888",
+        "zip_code": "3456789",
+        "email": "starbuck@gmail.com",
+        "password": "$2a$10$DKQbrUZvnXrY0StWVFzKmuAdlkjtuXIe.biGWzAcoSFBfB4WHRfAq",
+        "isDeleted": 0,
+        "createdAt": "2023-06-29T06:44:52.000Z",
+        "updatedAt": "2023-07-07T05:53:23.000Z"
+      },
+      {
+        "id": 7,
+        "sponsor_name": "Roblox",
+        "subscription_id": {
+          "id": 2,
+          "plan_name": "Business Pro",
+          "bill_frequency": "month",
+          "price_per_user": 79,
+          "feature_ids": [
+            "Listing as a reward partner",
+            "Customer redemption / click insights",
+            "Up to 200 redemption/footfall",
+            "1 banner ads for 7 days"
+          ],
+          "isDeleted": 0,
+          "createdAt": "2023-06-22T07:15:49.000Z",
+          "updatedAt": "2023-06-30T10:45:17.000Z"
+        },
+        "role_id": {
+          "id": 14,
+          "roleDisplayname": "Admin",
+          "rolegroup": "sub-backend",
+          "status": "Active",
+          "isDeleted": 0,
+          "createdAt": "2023-06-23",
+          "updatedAt": "2023-06-23"
+        },
+        "notes": "Well I am from America",
+        "image": "https://ui-avatars.com/api/?name=R&background=ffffff&color=000&size=200&format=png",
+        "qr_code": "public/Qr_code/roblox@gmail.com.png",
+        "street_address": "504, street park, Post office: Post",
+        "state": "Dallas",
+        "city": "Texas",
+        "country": "America",
+        "phone": "4556-444-555",
+        "zip_code": "3456789",
+        "email": "roblox@gmail.com",
+        "password": "$2a$10$xjPcrXSjHK2I7nQFbQlzWODD5LZ64gXK31mDpccVRrLtIfx4sfhS6",
+        "isDeleted": 0,
+        "createdAt": "2023-06-29T06:47:38.000Z",
+        "updatedAt": "2023-06-29T06:47:38.000Z"
+      }
+    ],
+    "currentPage": 1,
+    "limitPerPage": 10,
+    "totalPages": 1
   }
 }
